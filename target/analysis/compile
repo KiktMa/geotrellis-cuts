@@ -1,0 +1,599 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> D:\JavaConsist\Project\spark_demo\target\classes
+compile options:
+3 items
+0 -> -unchecked
+1 -> -deprecation
+2 -> -feature
+javac options:
+5 items
+0 -> -Xlint:unchecked
+1 -> -Xlint:deprecation
+2 -> -g
+3 -> -encoding
+4 -> UTF-8
+compiler version:
+1 items
+0 -> 2.11.8
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+30 items
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$1.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$2.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$3.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$4.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$5.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$6.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$7.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$8.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$renderPNG$1$$anonfun$apply$1.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$renderPNG$1.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$run$1.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$run$2.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$run$3.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$1.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$2.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$3.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$4.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$5.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$6.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$7.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$8.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$main$1.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$main$2.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$main$3.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\HelloWorld$.class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\HelloWorld.class
+binary dependencies:
+26 items
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\Java1.8\jdk1.8.0\jre\lib\rt.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\com\github\julien-truffaut\monocle-core_2.11\1.5.1-cats\monocle-core_2.11-1.5.1-cats.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\io\spray\spray-json_2.11\1.3.3\spray-json_2.11-1.3.3.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\apache\accumulo\accumulo-core\1.10.2\accumulo-core-1.10.2.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\apache\hadoop\hadoop-common\2.6.5\hadoop-common-2.6.5.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\apache\spark\spark-core_2.11\2.3.4\spark-core_2.11-2.3.4.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-accumulo_2.11\2.1.0\geotrellis-accumulo_2.11-2.1.0.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-proj4_2.11\2.1.0\geotrellis-proj4_2.11-2.1.0.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-raster_2.11\2.1.0\geotrellis-raster_2.11-2.1.0.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-spark_2.11\2.1.0\geotrellis-spark_2.11-2.1.0.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-util_2.11\2.1.0\geotrellis-util_2.11-2.1.0.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-vector_2.11\2.1.0\geotrellis-vector_2.11-2.1.0.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\scala-lang\scala-library\2.11.8\scala-library-2.11.8.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\Java1.8\jdk1.8.0\jre\lib\rt.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\apache\accumulo\accumulo-core\1.10.2\accumulo-core-1.10.2.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\apache\hadoop\hadoop-common\2.6.5\hadoop-common-2.6.5.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\apache\spark\spark-core_2.11\2.3.4\spark-core_2.11-2.3.4.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-accumulo_2.11\2.1.0\geotrellis-accumulo_2.11-2.1.0.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-proj4_2.11\2.1.0\geotrellis-proj4_2.11-2.1.0.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-raster_2.11\2.1.0\geotrellis-raster_2.11-2.1.0.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-spark_2.11\2.1.0\geotrellis-spark_2.11-2.1.0.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-util_2.11\2.1.0\geotrellis-util_2.11-2.1.0.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-vector_2.11\2.1.0\geotrellis-vector_2.11-2.1.0.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\scala-lang\scala-library\2.11.8\scala-library-2.11.8.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> D:\JavaConsist\Java1.8\jdk1.8.0\jre\lib\rt.jar
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\scala-lang\scala-library\2.11.8\scala-library-2.11.8.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+30 items
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$1
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$3
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$4
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$5
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$6
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$7
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$8
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$renderPNG$1
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$renderPNG$1$$anonfun$apply$1
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$run$1
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$run$2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com.spark.demo.Cuts$$anonfun$run$3
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample$
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample$$anonfun$1
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample$$anonfun$2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample$$anonfun$3
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample$$anonfun$4
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample$$anonfun$5
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample$$anonfun$6
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample$$anonfun$7
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample$$anonfun$8
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample$$anonfun$main$1
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample$$anonfun$main$2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com.spark.demo.GeoTrellisAccumuloExample$$anonfun$main$3
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> com.spark.demo.HelloWorld
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> com.spark.demo.HelloWorld$
+used names:
+373 items
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> +
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> <init>
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> <refinement>
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> AccumuloAttributeStore
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> AccumuloInstance
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> AccumuloLayerReader
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> AccumuloLayerWriter
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Any
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> AnyRef
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Array
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> ArrayOps
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> AuthenticationToken
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> AvroRecordCodec
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> AvroUnionCodec
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Bilinear
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Boolean
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Boundable
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Bounds
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> CRS
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> CellGrid
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> CellType
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> CharSequence
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> ClassTag
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> ClientConfiguration
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> ColorMap
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> ColorRamp
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Component
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> CropMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Cuts
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Double
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> File
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> FileLayerReader
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> FloatingLayoutScheme
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Function1
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Function2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> GetComponent
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> HadoopSparkContextMethodsWrapper
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> InstancePNGFileName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Int
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> JsObject
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> JsonFormat
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> K
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> K2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> KeyIndexMethod
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> KryoRegistrator
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> KryoSerializer
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> LayerId
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> LayoutDefinition
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> LayoutScheme
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> M
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> MatchError
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Metadata
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Nothing
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Object
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Options
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> PLens
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> PasswordToken
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Path
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Png
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Predef
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> ProjectedExtent
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Pyramid
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> RDD
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> RasterRegionReproject
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Reproject
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> ResampleMethod
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> RootJsonFormat
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> SparkConf
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> SparkContext
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> SpatialComponent
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> SpatialKey
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> SpatialKeyFormat
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Stitcher
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> String
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> StringOps
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> T
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> T0
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> T1
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> T2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Tile
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> TileLayerMetadata
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> TileLayerRDD
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> TileMergeMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> TilePrototypeMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> TileReprojectMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> TileStitcher
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Tiler
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> TilerKeyMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Tuple2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> U
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> Unit
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> V
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> WebMercator
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> ZCurveKeyIndexMethod
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> ZooKeeperInstance
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> ZoomedLayoutScheme
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> _$7
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> _1
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> _2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> accumulo
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> apache
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> appName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> apply
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> asInstanceOf
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> augmentString
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> boundsComponent
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> cellType
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> client
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> col
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> colorRender
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> com
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> core
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> createFolder
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> demo
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> exists
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> file
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> files
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> folderName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> foreach
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> fromRDD
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> fs
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> geoRDD
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> geotrellis
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> getName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> hadoop
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> hadoopGeoTiffRDD
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> hadoopInPath
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> identityComponent
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> index
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> instanceFileName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> instanceName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> io
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> isInstanceOf
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> isPNG
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> item
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> java
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> key
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> kryo
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> layer
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> layerId
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> layers
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> layout
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> layoutComponent
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> layoutScheme
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> listFiles
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> master
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> materializeClassTag
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> maxZoom
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> methodToOptions
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> mkdirs
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> monocle
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> ne
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> org
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> outFilePath
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> outPathPNGYFileName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> package
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> password
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> path
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> pngFileName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> pngOutFileName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> proj4
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> pyramid
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> raster
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> rasterMetaData
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> rdd
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> read
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> reader
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> refArrayOps
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> render
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> renderPng
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> reproject
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> reprojected
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> resample
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> resampleMethodToOptions
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> row
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> run
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> scala
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> security
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> serializer
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> set
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> setAppName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> setMaster
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> setZoom
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> singlebandInstance
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> spark
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> sparkConf
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> sparkContext
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> spatialKeyAvroFormat
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> spatialKeyIndexMethod
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> stitch
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> stop
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> table
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> tile
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> tileLayerMetadataFormat
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> tileSize
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> tileToLayout
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> tileUnionCodec
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> tiled
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> tiling
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> toInt
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> tokens
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> unary_!
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> unchecked
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> upLevels
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> user
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> util
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> vector
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> withProjectedExtentTilerKeyMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> withTileMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> withTileRDDReprojectMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> withTilerMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> write
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> writer
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> z
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> zookeepers
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> zoomLevel
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> zoomLevelFileName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> <init>
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> <refinement>
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> ==
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> AccumuloInstance
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> AccumuloLayerWriter
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Any
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> AnyRef
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Array
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> AuthenticationToken
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Bilinear
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Boolean
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Boundable
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Bounds
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> CRS
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> CellGrid
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> CellType
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> CharSequence
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Class
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> ClassTag
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> ClientConfiguration
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Component
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Configuration
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> CropMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Double
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> FloatingLayoutScheme
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Function1
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Function2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> GeoTrellisAccumuloExample
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> GetComponent
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> HadoopSparkContextMethodsWrapper
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Int
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> K
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> K2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> KeyIndex
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> LayerId
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> LayoutDefinition
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> LayoutScheme
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> M
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> MatchError
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Metadata
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Nothing
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Object
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Options
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> PasswordToken
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Path
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Predef
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> ProjectedExtent
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Pyramid
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> RDD
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> RasterRegionReproject
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Reproject
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> ResampleMethod
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> SparkConf
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> SparkContext
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> SpatialComponent
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> SpatialKey
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Stitcher
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> String
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> T
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Tile
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> TileLayerMetadata
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> TileLayerRDD
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> TileMergeMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> TilePrototypeMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> TileReprojectMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> TileStitcher
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Tiler
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> TilerKeyMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Tuple2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> Unit
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> V
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> WebMercator
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> ZCurveKeyIndexMethod
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> ZooKeeperInstance
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> ZoomedLayoutScheme
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> _$7
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> _1
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> _2
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> accumulo
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> apache
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> apply
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> boundsComponent
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> cellType
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> client
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> com
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> conf
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> core
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> demo
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> fromRDD
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> fs
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> geoRDD
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> geotrellis
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> hadoop
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> hadoopGeoTiffRDD
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> identityComponent
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> index
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> instanceName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> io
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> layout
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> layoutComponent
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> layoutScheme
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> materializeClassTag
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> methodToOptions
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> ne
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> org
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> package
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> password
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> path
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> proj4
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> pyramid
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> raster
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> rasterMetaData
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> rdd
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> reproject
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> reprojected
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> resample
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> resampleMethod
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> resampleMethodToOptions
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> sc
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> scala
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> security
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> setAppName
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> setMaster
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> singlebandInstance
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> spark
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> stitch
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> table
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> tileToLayout
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> tiled
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> tiling
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> tokens
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> unchecked
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> upLevels
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> user
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> util
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> withProjectedExtentTilerKeyMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> withTileMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> withTileRDDReprojectMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> withTilerMethods
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> z
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> zookeepers
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> <init>
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> Any
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> AnyRef
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> Array
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> HelloWorld
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> Object
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> Predef
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> String
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> Unit
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> com
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> demo
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> println
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> scala
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> spark
+product stamps:
+30 items
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$1.class -> lastModified(1679274316491)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$2.class -> lastModified(1679274316492)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$3.class -> lastModified(1679274316494)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$4.class -> lastModified(1679274316496)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$5.class -> lastModified(1679274316497)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$6.class -> lastModified(1679274316498)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$7.class -> lastModified(1679274316499)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$8.class -> lastModified(1679274316501)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$renderPNG$1$$anonfun$apply$1.class -> lastModified(1679274316507)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$renderPNG$1.class -> lastModified(1679274316503)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$run$1.class -> lastModified(1679274316509)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$run$2.class -> lastModified(1679274316511)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$$anonfun$run$3.class -> lastModified(1679274316513)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts$.class -> lastModified(1679274316485)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\Cuts.class -> lastModified(1679274316422)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$1.class -> lastModified(1679274316523)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$2.class -> lastModified(1679274316524)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$3.class -> lastModified(1679274316526)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$4.class -> lastModified(1679274316527)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$5.class -> lastModified(1679274316530)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$6.class -> lastModified(1679274316532)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$7.class -> lastModified(1679274316537)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$8.class -> lastModified(1679274316539)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$main$1.class -> lastModified(1679274316542)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$main$2.class -> lastModified(1679274316543)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$$anonfun$main$3.class -> lastModified(1679274316544)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample$.class -> lastModified(1679274316521)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\GeoTrellisAccumuloExample.class -> lastModified(1679274316514)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\HelloWorld$.class -> lastModified(1679274316546)
+D:\JavaConsist\Project\spark_demo\target\classes\com\spark\demo\HelloWorld.class -> lastModified(1679274316545)
+source stamps:
+3 items
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> hash(494a261c015604c0347198c1c6470513f33d031e)
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> hash(4052012419ecc5d3c7ee0dbf2c0608fa459f5692)
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> hash(3d97b788c986dd24fd2b97554f1b2017b33e9e32)
+binary stamps:
+13 items
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\com\github\julien-truffaut\monocle-core_2.11\1.5.1-cats\monocle-core_2.11-1.5.1-cats.jar -> lastModified(1678154741904)
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\io\spray\spray-json_2.11\1.3.3\spray-json_2.11-1.3.3.jar -> lastModified(1678154839756)
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\apache\accumulo\accumulo-core\1.10.2\accumulo-core-1.10.2.jar -> lastModified(1677723987130)
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\apache\hadoop\hadoop-common\2.6.5\hadoop-common-2.6.5.jar -> lastModified(1678154849040)
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\apache\spark\spark-core_2.11\2.3.4\spark-core_2.11-2.3.4.jar -> lastModified(1678935876776)
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-accumulo_2.11\2.1.0\geotrellis-accumulo_2.11-2.1.0.jar -> lastModified(1679207255981)
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-proj4_2.11\2.1.0\geotrellis-proj4_2.11-2.1.0.jar -> lastModified(1678874826386)
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-raster_2.11\2.1.0\geotrellis-raster_2.11-2.1.0.jar -> lastModified(1678874916338)
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-spark_2.11\2.1.0\geotrellis-spark_2.11-2.1.0.jar -> lastModified(1678874893059)
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-util_2.11\2.1.0\geotrellis-util_2.11-2.1.0.jar -> lastModified(1678874826739)
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-vector_2.11\2.1.0\geotrellis-vector_2.11-2.1.0.jar -> lastModified(1678874762682)
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\scala-lang\scala-library\2.11.8\scala-library-2.11.8.jar -> lastModified(1678154935585)
+D:\JavaConsist\Java1.8\jdk1.8.0\jre\lib\rt.jar -> lastModified(1661833506432)
+class names:
+13 items
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\com\github\julien-truffaut\monocle-core_2.11\1.5.1-cats\monocle-core_2.11-1.5.1-cats.jar -> monocle.PLens$
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\io\spray\spray-json_2.11\1.3.3\spray-json_2.11-1.3.3.jar -> spray.json.RootJsonFormat
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\apache\accumulo\accumulo-core\1.10.2\accumulo-core-1.10.2.jar -> org.apache.accumulo.core.client.security.tokens.PasswordToken
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\apache\hadoop\hadoop-common\2.6.5\hadoop-common-2.6.5.jar -> org.apache.hadoop.fs.Path
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\apache\spark\spark-core_2.11\2.3.4\spark-core_2.11-2.3.4.jar -> org.apache.spark.SparkConf
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-accumulo_2.11\2.1.0\geotrellis-accumulo_2.11-2.1.0.jar -> geotrellis.spark.io.accumulo.AccumuloInstance
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-proj4_2.11\2.1.0\geotrellis-proj4_2.11-2.1.0.jar -> geotrellis.proj4.CRS
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-raster_2.11\2.1.0\geotrellis-raster_2.11-2.1.0.jar -> geotrellis.raster.package$
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-spark_2.11\2.1.0\geotrellis-spark_2.11-2.1.0.jar -> geotrellis.spark.tiling.FloatingLayoutScheme
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-util_2.11\2.1.0\geotrellis-util_2.11-2.1.0.jar -> geotrellis.util.package$
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\locationtech\geotrellis\geotrellis-vector_2.11\2.1.0\geotrellis-vector_2.11-2.1.0.jar -> geotrellis.vector.ProjectedExtent
+D:\JavaConsist\apache-maven-3.8.4\mvn_resp\org\scala-lang\scala-library\2.11.8\scala-library-2.11.8.jar -> scala.Unit
+D:\JavaConsist\Java1.8\jdk1.8.0\jre\lib\rt.jar -> java.lang.Object
+internal apis:
+3 items
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwBhundAAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAZc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwShaTcXQABm5vdGlmeXNxAH4ADBzhhwF0AAR3YWl0c3EAfgAMRk8V9XQADSRhc0luc3RhbmNlT2ZzcQB+AAw5O1EydAAMY3JlYXRlRm9sZGVyc3EAfgAMTLsp9nQABmVxdWFsc3NxAH4ADJwKm950AAxhc0luc3RhbmNlT2ZzcQB+AAyuAP8wdAADcnVuc3EAfgAMuxYtcnQADHN5bmNocm9uaXplZHNxAH4ADEtWBy50AA0kaXNJbnN0YW5jZU9mc3EAfgAM5chi9XQABG1haW5zcQB+AAz/WFLxdAAJbm90aWZ5QWxsc3EAfgAMRdOxhnQABEN1dHNzcQB+AAwNUwo4dAAMaXNJbnN0YW5jZU9mc3EAfgAM9OLkPXQAAj09c3EAfgAMqvVjZHQABWNsb25lc3EAfgAMgDEBf3QADHNwYXJrQ29udGV4dHNxAH4ADE3fFZN0AAh0b1N0cmluZ3NxAH4ADC7Ku1R0AAIhPXNxAH4ADHmNcVp0AAhnZXRDbGFzc3NxAH4ADDlQnYp0AAlyZW5kZXJQTkdzcQB+AAyaO8q/dAACbmVzcQB+AAwVml/sdAACZXFzcQB+AAxG3yy0dAACIyNzcQB+AAwMR4IhdAAIZmluYWxpemVzcQB+AAzTOQhVdAAIaGFzaENvZGVzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAABc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgBJeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnOX52HcEyZ7swIAAUIABWZsYWdzeHAAdAATY29tLnNwYXJrLmRlbW8uQ3V0c3VyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgAheHNidGkuYXBpLkFic3RyYWN0TGF6eSRTdHJpY3RMYXp5DWYcaykWKrgCAAFMAAV2YWx1ZXQAEkxqYXZhL2xhbmcvT2JqZWN0O3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4AYXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBJTAAJaW5oZXJpdGVkcQB+AElMAAdwYXJlbnRzcQB+AEl4cQB+AGZzcQB+AGF1cQB+AEQAAAABc3IADXhzYnRpLmFwaS5EZWZSvp/ifLQ2aQIAAkwACnJldHVyblR5cGV0ABBMeHNidGkvYXBpL1R5cGU7WwAPdmFsdWVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvUGFyYW1ldGVyTGlzdDt4cQB+AEpxAH4AU3VxAH4AVAAAAABzcQB+AFYAcQB+ACF1cQB+AFkAAAAAc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgANTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hxAH4AZXQABFVuaXRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AGVzcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AIF1cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADUwAA3RwZXEAfgBueHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgBcdAAFUGxhaW50AARhcmdzc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJpemVkFmzuaQPJu38CAAJMAAhiYXNlVHlwZXEAfgB1WwANdHlwZUFyZ3VtZW50c3QAEVtMeHNidGkvYXBpL1R5cGU7eHEAfgBlc3EAfgB0dAAFQXJyYXlxAH4AenVyABFbTHhzYnRpLmFwaS5UeXBlO3T/pVp7+elBAgAAeHAAAAABc3EAfgB0dAAGU3RyaW5nc3EAfgB4c3EAfgB7dXEAfgB+AAAAA3NxAH4AgHQABGphdmFzcQB+AIB0AARsYW5ncQB+AIVzcQB+AGF1cQB+AEQAAAAAc3EAfgBhdXEAfgCZAAAAAnNxAH4AdHQABk9iamVjdHEAfgCdc3EAfgB0dAADQW55cQB+AHp1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAA3NyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0AA5jb20uc3BhcmsuZGVtb3NxAH4ArnQAA2NvbXNxAH4ArnQACWNvbS5zcGFya3NyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABhvyMfkd1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdAAwRDpcSmF2YUNvbnNpc3RcUHJvamVjdFxzcGFya19kZW1vXHRhcmdldFxjbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUSUomHAFWBMA0cZjBxkcFE/M9Ax4=
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwuddJlQAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAVc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwE18WKXQABm5vdGlmeXNxAH4ADKx1yUB0AAR3YWl0c3EAfgAM6cribHQADSRhc0luc3RhbmNlT2ZzcQB+AAxXyb5edAAGZXF1YWxzc3EAfgAMfnCzbnQADGFzSW5zdGFuY2VPZnNxAH4ADLAtB3V0AAxzeW5jaHJvbml6ZWRzcQB+AAzNwiv8dAANJGlzSW5zdGFuY2VPZnNxAH4ADB3abOV0AARtYWluc3EAfgAMc55hWXQACW5vdGlmeUFsbHNxAH4ADBP8f4V0AAxpc0luc3RhbmNlT2ZzcQB+AAyzxy8/dAAZR2VvVHJlbGxpc0FjY3VtdWxvRXhhbXBsZXNxAH4ADNOXye90AAI9PXNxAH4ADFEvMqh0AAVjbG9uZXNxAH4ADGAXQXd0AAh0b1N0cmluZ3NxAH4ADDr9Pl90AAIhPXNxAH4ADG0kYXt0AAhnZXRDbGFzc3NxAH4ADEvP0RZ0AAJuZXNxAH4ADPNx2WV0AAJlcXNxAH4ADCX4k8x0AAIjI3NxAH4ADJkaJP10AAhmaW5hbGl6ZXNxAH4ADBSk+Ud0AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AEF4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAB0AChjb20uc3BhcmsuZGVtby5HZW9UcmVsbGlzQWNjdW11bG9FeGFtcGxldXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBZc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AEFMAAlpbmhlcml0ZWRxAH4AQUwAB3BhcmVudHNxAH4AQXhxAH4AXnNxAH4AWXVxAH4APAAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4AQnEAfgBLdXEAfgBMAAAAAHNxAH4ATgBxAH4AHXVxAH4AUQAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBddAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AXXNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AeXVyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AGZ4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AFR0AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AG1bAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AF1zcQB+AGx0AAVBcnJheXEAfgBydXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAFzcQB+AGx0AAZTdHJpbmdzcQB+AHBzcQB+AHN1cQB+AHYAAAADc3EAfgB4dAAEamF2YXNxAH4AeHQABGxhbmdxAH4AfXNxAH4AWXVxAH4APAAAAABzcQB+AFl1cQB+AJEAAAACc3EAfgBsdAAGT2JqZWN0cQB+AJVzcQB+AGx0AANBbnlxAH4AcnVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAADc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQADmNvbS5zcGFyay5kZW1vc3EAfgCmdAADY29tc3EAfgCmdAAJY29tLnNwYXJrc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAGG/Ix+R3VyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0ADBEOlxKYXZhQ29uc2lzdFxQcm9qZWN0XHNwYXJrX2RlbW9cdGFyZ2V0XGNsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABRAUgEkGezF08fuDb8sBgj6RZ9Wkg==
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwJKD34gAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAVc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwWb4ZAXQABm5vdGlmeXNxAH4ADBvK8jt0AAR3YWl0c3EAfgAMjmKqoHQADSRhc0luc3RhbmNlT2ZzcQB+AAwYSTeIdAAGZXF1YWxzc3EAfgAMtrXTpHQADGFzSW5zdGFuY2VPZnNxAH4ADLb+jSN0AAxzeW5jaHJvbml6ZWRzcQB+AAy1hug1dAANJGlzSW5zdGFuY2VPZnNxAH4ADOOwSAN0AARtYWluc3EAfgAMyP5LDHQACW5vdGlmeUFsbHNxAH4ADFuItkx0AAxpc0luc3RhbmNlT2ZzcQB+AAwAfUNgdAACPT1zcQB+AAx9C0m0dAAFY2xvbmVzcQB+AAwWd8NFdAAIdG9TdHJpbmdzcQB+AAyrSXSYdAACIT1zcQB+AAwe9INGdAAKSGVsbG9Xb3JsZHNxAH4ADEYCHM90AAhnZXRDbGFzc3NxAH4ADPqbxLR0AAJuZXNxAH4ADJ8Gwbx0AAJlcXNxAH4ADKJYyEl0AAIjI3NxAH4ADLHpTLl0AAhmaW5hbGl6ZXNxAH4ADOcZMTZ0AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AEF4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAB0ABljb20uc3BhcmsuZGVtby5IZWxsb1dvcmxkdXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBZc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AEFMAAlpbmhlcml0ZWRxAH4AQUwAB3BhcmVudHNxAH4AQXhxAH4AXnNxAH4AWXVxAH4APAAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4AQnEAfgBLdXEAfgBMAAAAAHNxAH4ATgBxAH4AHXVxAH4AUQAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBddAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AXXNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AeXVyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AGZ4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AFR0AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AG1bAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AF1zcQB+AGx0AAVBcnJheXEAfgBydXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAFzcQB+AGx0AAZTdHJpbmdzcQB+AHBzcQB+AHN1cQB+AHYAAAADc3EAfgB4dAAEamF2YXNxAH4AeHQABGxhbmdxAH4AfXNxAH4AWXVxAH4APAAAAABzcQB+AFl1cQB+AJEAAAACc3EAfgBsdAAGT2JqZWN0cQB+AJVzcQB+AGx0AANBbnlxAH4AcnVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAADc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQADmNvbS5zcGFyay5kZW1vc3EAfgCmdAADY29tc3EAfgCmdAAJY29tLnNwYXJrc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAGG/Ix+R3VyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0ADBEOlxKYXZhQ29uc2lzdFxQcm9qZWN0XHNwYXJrX2RlbW9cdGFyZ2V0XGNsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABQ9l7eIyYbdJP0rl1VPGyAXsz6eMg==
+external apis:
+0 items
+source infos:
+3 items
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\Cuts.scala -> 
+AAAAAAAAAAA=
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\GeoTrellisAccumuloExample.scala -> 
+AAAAAAAAAAA=
+D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo\HelloWorld.scala -> 
+AAAAAAAAAAA=
+compilations:
+1 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABhvyMfkd1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAMEQ6XEphdmFDb25zaXN0XFByb2plY3Rcc3BhcmtfZGVtb1x0YXJnZXRcY2xhc3Nlc3QAAS8=
