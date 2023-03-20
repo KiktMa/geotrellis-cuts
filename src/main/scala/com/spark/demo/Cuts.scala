@@ -103,7 +103,8 @@ object Cuts {
 
       val layerId = LayerId("layer_name", z)
 
-      writer.write(layerId, rdd, ZCurveKeyIndexMethod)
+      // 这里我们选择的是索引方式，希尔伯特和Z曲线两种方式选择
+      writer.write(layerId, rdd, HilbertKeyIndexMethod)
     }
   }
 
