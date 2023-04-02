@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenLayers Example</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+    <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
+</head>
+<body>
+<div id="map" style="width:100%;height:100%;"></div>
+<script>
+    var layerName = "layerName";
+    var map = new ol.Map({
+        target: 'map',
+        view: new ol.View({
+            center: ol.proj.fromLonLat([0, 0]),
+            zoom: 1
+        })
+    });
+    var wmtsSource = new ol.source.XYZ({
+        url: "http://localhost:8080/wmts/" + layerName + "/{z}/{x}/{y}",
+        attributions: "Tiles © <a href=\"http://www.geoserver.org/\">GeoServer</a>"
+    });
+    var wmtsLayer = new ol.layer.Tile({
+        source: wmtsSource
+    });
+    map.addLayer(wmtsLayer);
+</script>
+</body>
+</html>

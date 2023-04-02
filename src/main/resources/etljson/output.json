@@ -1,0 +1,18 @@
+{
+  "backend":{
+    "type":"accumulo",
+    "path":"tiles",
+    "profile":"accumulo-name"
+  },
+  "reprojectMethod":"buffered",
+  "encoding":"geotiff",
+  "tileSize":512,
+  "resolutionThreshold":0.1,
+  "pyramid":true,
+  "resampleMethod":"bilinear",
+  "keyIndexMethod":{
+    "type":"zorder"
+  },
+  "layoutScheme":"zoomed",
+  "crs":"EPSG:3857"
+}

@@ -1,5 +1,9 @@
 package com.spark.demo
 
+//import com.spark.demo.geosot.GeoSot
+import com.vividsolutions.jts.geom.GeometryFactory
+import com.vividsolutions.jts.io.WKTReader
+import com.vividsolutions.jts.operation.valid.IsValidOp
 import geotrellis.proj4._
 import geotrellis.raster._
 import geotrellis.raster.render._
@@ -7,9 +11,10 @@ import geotrellis.raster.resample._
 import geotrellis.spark._
 import geotrellis.spark.Boundable
 import geotrellis.spark.io._
-import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloInstance, AccumuloLayerReader, AccumuloLayerWriter}
+import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloInstance, AccumuloLayerDeleter, AccumuloLayerReader, AccumuloLayerWriter}
 import geotrellis.spark.io.file._
 import geotrellis.spark.io.hadoop._
+import geotrellis.spark.io.hbase.{HBaseInstance, HBaseLayerWriter}
 import geotrellis.spark.io.index._
 import geotrellis.spark.io.kryo.KryoRegistrator
 import org.apache.spark.serializer.KryoSerializer
@@ -19,15 +24,17 @@ import geotrellis.vector._
 import monocle.PLens
 import org.apache.accumulo.core.client.{ClientConfiguration, ZooKeeperInstance}
 import org.apache.accumulo.core.client.security.tokens.PasswordToken
+import org.apache.commons.httpclient.URI
 import org.apache.hadoop.fs.Path
 import org.apache.spark._
 import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.functions.udf
 
 import java.io.File
 
 object Cuts {
   //  输入文件路径
-  private val hadoopInPath: String = "hdfs://node1:9000/tiff/caijian_zhuanhuan.tif"
+  private val hadoopInPath: String = "hdfs://node1:9000/tiff/road_slop_8bit.tif"
   //  输出文件路径
   private val outFilePath: String = "/app/tif"
 
@@ -37,7 +44,7 @@ object Cuts {
   private val appName: String = "GeoTrellis2Accumulo"
 
   //  切片等级
-  private val setZoom: Int = 8
+  private val setZoom: Int = 18
   private val tileSize: Int = 512
 
   //  是否生成PNG
@@ -57,22 +64,22 @@ object Cuts {
 
   def main(args: Array[String]): Unit = {
     try {
-      run(sparkContext)
+      run(sparkContext,args(0),args(1),args(2),args(3),args(4))
     } finally {
       sparkContext.stop()
     }
   }
 
-  def run(implicit sparkContext: SparkContext): Unit = {
+  def run(implicit sparkContext: SparkContext
+          ,tableName:String,path:String,part:String,startZoom:String,endZoom:String): Unit = {
 
     val instanceName = "accumulo"
     val zookeepers = "node1:2181,node2:2181,node3:2181"
     val user = "root"
     val password = "root"
-    val table = "tiles"
     //    构建GeoRDD
     //    ProjectedExtent类型值必须赋予，否则创建元数据信息的时候会报找不到
-    val geoRDD: RDD[(ProjectedExtent, Tile)] = sparkContext.hadoopGeoTiffRDD(hadoopInPath)
+    val geoRDD: RDD[(ProjectedExtent, Tile)] = sparkContext.hadoopGeoTiffRDD(path)
 
     //    创建元数据信息
     val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoRDD, FloatingLayoutScheme(512))
@@ -82,30 +89,49 @@ object Cuts {
       tileToLayout(rasterMetaData.cellType, rasterMetaData.layout, Bilinear)
     // 请特别注意，此处咨询过 GeoTrellis 的作者，请不要随意的使用repartition!!
     // repartition 会将所有的数据进行重新分区，增加计算量！
-    //  .repartition(100)
+     .repartition(part.toInt)
 
     //    设置投影和瓦片大小
     val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(WebMercator, tileSize = tileSize)
 
-    val (maxZoom, reprojected) = TileLayerRDD(tiled, rasterMetaData)
+    val (_, reprojected) = TileLayerRDD(tiled, rasterMetaData)
       .reproject(WebMercator, layoutScheme, Bilinear)
 
-    val metadata = reprojected.metadata
-
     //    创建输出存储区
-//    val attributeStore = FileAttributeStore(outFilePath)
-//    val writer = FileLayerWriter(attributeStore)
+    //    val attributeStore = FileAttributeStore(outFilePath)
+    //    val writer = FileLayerWriter(attributeStore)
 
-//    val colorRender = ColorRamps.LightToDarkSunset
+    //    val colorRender = ColorRamps.LightToDarkSunset
+    val instance = AccumuloInstance(instanceName, zookeepers, user, new PasswordToken(password))
+    val attributeStore = AccumuloAttributeStore(instance)
+    val store = AccumuloLayerWriter(instance, attributeStore,tableName)
 
-    Pyramid.upLevels(reprojected, layoutScheme, setZoom, Bilinear) { (rdd, z) =>
-      val writer = AccumuloLayerWriter(AccumuloInstance.apply(instanceName, zookeepers, user, new PasswordToken(password)), table)
 
-      val layerId = LayerId("layer_name", z)
+//    def getTileCode(zoom: Int, lat: Double, lon: Double): String = {
+//      val code = GeoSot.INSTANCE.getHexCode(lat, lon, 0, zoom)
+//      s"${code}"
+//    }
 
+    Pyramid.upLevels(reprojected, layoutScheme,startZoom.toInt, endZoom.toInt, Bilinear) { (rdd, z) =>
+      val layerId = LayerId("layer_"+tableName, z)
+      if(attributeStore.layerExists(layerId)){
+        AccumuloLayerDeleter(attributeStore).delete(layerId)
+      }
+//      val tilesWithMetadata = rdd.map { case (key, tile) =>
+//        val tileCode = getTileCode(z, rasterMetaData.extent.center.y, rasterMetaData.extent.center.x)
+//        val metaData = TileLayerMetadata(
+//          cellType = tile.cellType,
+//          layout = rasterMetaData.layout,
+//          extent = rasterMetaData.mapTransform(key),
+//          crs = rasterMetaData.crs,
+//          bounds = KeyBounds(key, key)
+//        )
+//        (key, tile, metaData)
+//      }
       // 这里我们选择的是索引方式，希尔伯特和Z曲线两种方式选择
-      writer.write(layerId, rdd, HilbertKeyIndexMethod)
+      store.write(layerId, rdd, ZCurveKeyIndexMethod)
     }
+    sparkContext.stop()
   }
 
   def renderPNG(implicit sparkContext: SparkContext, zoom: Int, colorRender: Any): Unit = {

@@ -1,0 +1,11 @@
+[
+  {
+    "format":"geotiff",
+    "name":"layer",
+    "cache":"NONE",
+    "backend":{
+      "type":"hadoop",
+      "path":"hdfs://node1:9000/tiff/caijian_zhuanhuan.tif"
+    }
+  }
+]
