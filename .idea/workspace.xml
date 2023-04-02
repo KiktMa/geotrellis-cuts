@@ -9,14 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/win32-x86-64/GeoSOTForJava.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/win32-x86-64/libGeoSOT3D.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/Cuts.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/Cuts.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/GeoTrellisAccumuloExample.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/GeoTrellisAccumulo.scala" afterDir="false" />
-    </list>
+    <list default="true" id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,7 +219,7 @@
       <workItem from="1679316508587" duration="56718000" />
       <workItem from="1679532089157" duration="90699000" />
       <workItem from="1680014056142" duration="56482000" />
-      <workItem from="1680193033012" duration="89305000" />
+      <workItem from="1680193033012" duration="89654000" />
     </task>
     <servers />
   </component>
