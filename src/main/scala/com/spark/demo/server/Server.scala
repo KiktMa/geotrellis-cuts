@@ -70,7 +70,7 @@ object Server {
     } ~
       // Static content routes:
       pathEndOrSingleSlash {
-        getFromFile("static/index.html")
+        getFromFile("static/index11.html")
       } ~
       pathPrefix("") {
         getFromDirectory("static")

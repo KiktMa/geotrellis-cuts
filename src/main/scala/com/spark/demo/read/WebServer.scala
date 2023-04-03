@@ -40,7 +40,7 @@ object WebServer {
     implicit val attributeStore = AccumuloAttributeStore(instance.connector)
     val collectionLayerReader = AccumuloCollectionLayerReader(instance)
 //    val reader = AccumuloLayerReader(instance)
-
+    attributeStore.layerIds
     //渲染色带
     val etColormap = "0:ffffe5ff;1:f7fcb9ff;2:d9f0a3ff;3:addd8eff;4:78c679ff;5:41ab5dff;6:238443ff"
     val colorMapForRender = ColorMap.fromStringDouble(etColormap).get
@@ -60,16 +60,16 @@ object WebServer {
     val route =
       pathPrefix("map" / IntNumber) { zoom =>
         val fn: Tile => Tile = rasterFunction()
-        val layerId = LayerId("layer_" + args(0), zoom)
+        val layerId = LayerId("layer_"+args(0), zoom)
         path(IntNumber / IntNumber) { (x, y) =>
           get {
             val valueReader: Reader[SpatialKey, Tile] = AccumuloValueReader(
               instance, attributeStore, layerId)
             val metadata = attributeStore.readMetadata[TileLayerMetadata[SpatialKey]](layerId)
-            val bounds = metadata.bounds.get
-            val key1 = bounds.minKey
-            val key2 = bounds.maxKey
-            val tile: Tile = valueReader.read(key1)
+//            val bounds = metadata.bounds.get
+//            val key1 = bounds.minKey
+//            val key2 = bounds.maxKey
+            val tile: Tile = valueReader.read(SpatialKey(x,y))
             val product: Tile = fn(tile)
             val cm: ColorMap = colorMapForRender
             val png: Png = product.renderPng(cm)

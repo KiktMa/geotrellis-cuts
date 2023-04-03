@@ -82,7 +82,7 @@ object Cuts {
     val geoRDD: RDD[(ProjectedExtent, Tile)] = sparkContext.hadoopGeoTiffRDD(path)
 
     //    创建元数据信息
-    val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoRDD, FloatingLayoutScheme(512))
+    val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoRDD, FloatingLayoutScheme(256))
 
     //    创建切片RDD
     val tiled: RDD[(SpatialKey, Tile)] = geoRDD.
@@ -92,7 +92,7 @@ object Cuts {
      .repartition(part.toInt)
 
     //    设置投影和瓦片大小
-    val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(WebMercator, tileSize = tileSize)
+    val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(WebMercator, tileSize = 512)
 
     val (_, reprojected) = TileLayerRDD(tiled, rasterMetaData)
       .reproject(WebMercator, layoutScheme, Bilinear)

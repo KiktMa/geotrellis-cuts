@@ -23,7 +23,7 @@ import org.apache.spark.{HashPartitioner, SparkConf, SparkContext}
 
 object SelfIndex {
 
-  def makeslice(inputPath: Path,startZoom:Int,endZoom:Int,tableName:String) = {
+  def makeslice(inputPath: String,startZoom:Int,endZoom:Int,tableName:String) = {
     val conf =
       new SparkConf()
         .setMaster("yarn")
@@ -36,7 +36,7 @@ object SelfIndex {
     runtoAccumuloTime(sc, inputPath,startZoom,endZoom,tableName)
   }
 
-  def runtoAccumuloTime(implicit sc: SparkContext, inputPath: Path,startZoom:Int,endZoom:Int,tableName:String) = {
+  def runtoAccumuloTime(implicit sc: SparkContext, inputPath: String,startZoom:Int,endZoom:Int,tableName:String) = {
 
 //    val hdfsConf = new Configuration()
 //    val hdfs = new Path("hdfs://node1:9000")
@@ -94,23 +94,23 @@ object SelfIndex {
 
     //创建金字塔并进行切片，保存至accumulo
     Pyramid.upLevels(reprojected, tarlayoutScheme,startZoom, endZoom, Bilinear) { (rdd, z) =>
-      val layerId = LayerId("layerId", z)
+      val layerId = LayerId("layer_"+tableName, z)
 //      val indexKeyBounds: KeyBounds[SpatialKey] = {
 //        val KeyBounds(minKey, maxKey) = rdd.metadata.bounds.get // assuming non-empty layer
-        //      KeyBounds(
-        //        minKey.setComponent[TemporalKey](minDate),
-        //        maxKey.setComponent[TemporalKey](maxDate)
-        //      )
+//              KeyBounds(
+//                minKey.formatted(""),
+//                maxKey.formatted("")
+//              )
 //        KeyBounds(minKey, maxKey)
 //      }
 //      val keyIndex =
-//        ZCurveKeyIndexMethod.createIndex()
+//        ZCurveKeyIndexMethod.createIndex(indexKeyBounds)
       writer.write(layerId, rdd, ZCurveKeyIndexMethod)
     }
     sc.stop()
   }
 
   def main(args: Array[String]): Unit = {
-    makeslice(new Path(args(0)),args(1).toInt,args(2).toInt,args(3))
+    makeslice(args(0),args(1).toInt,args(2).toInt,args(3))
   }
 }

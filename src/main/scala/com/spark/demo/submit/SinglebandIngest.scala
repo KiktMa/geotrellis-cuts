@@ -21,7 +21,6 @@ object SinglebandIngest {
   val zookeepers = "node1:2181,node2:2181,node3:2181"
   val user = "root"
   val passwordToken = "root"
-  val table = "test1"
 
   def main(args: Array[String]): Unit = {
     val sparkConf = new SparkConf()
@@ -30,7 +29,7 @@ object SinglebandIngest {
       .set("spark.kryo.registrator", classOf[KryoRegistrator].getName)
     implicit val sparkContext: SparkContext = new SparkContext(sparkConf)
 
-    val path = new Path("hdfs://node1:9000/tiff/road_slop_8bit.tif")
+    val path = new Path(args(0))
     val geoTiff = HadoopGeoTiffRDD.spatial(path)
 
     val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoTiff, FloatingLayoutScheme(512))
@@ -40,10 +39,10 @@ object SinglebandIngest {
         .mapValues { tile => tile.convert(ByteConstantNoDataCellType) },
       rasterMetaData.copy(cellType = ByteConstantNoDataCellType))
 
-    val layerId = LayerId("layerId", 18)
+    val layerId = LayerId("layer_"+args(1), 18)
 
     val writer = AccumuloLayerWriter(AccumuloInstance(
-      instance, zookeepers, user, new PasswordToken(passwordToken)), table)
+      instance, zookeepers, user, new PasswordToken(passwordToken)), args(1))
 
     writer.write(layerId,CoverLayer,ZCurveKeyIndexMethod)
   }

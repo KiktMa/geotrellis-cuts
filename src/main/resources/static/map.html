@@ -13,11 +13,11 @@
         target: 'map',
         view: new ol.View({
             center: ol.proj.fromLonLat([0, 0]),
-            zoom: 1
+            zoom: 18
         })
     });
     var wmtsSource = new ol.source.XYZ({
-        url: "http://localhost:8080/wmts/" + layerName + "/{z}/{x}/{y}",
+        url: "http://192.168.163.131:9090/map/{z}/{x}/{y}.png",
         attributions: "Tiles © <a href=\"http://www.geoserver.org/\">GeoServer</a>"
     });
     var wmtsLayer = new ol.layer.Tile({

@@ -9,7 +9,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="" />
+    <list default="true" id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/Cuts.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/Cuts.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/index/SelfIndex.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/index/SelfIndex.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/read/WebServer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/read/WebServer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/server/AkkaHTTPServer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/server/AkkaHTTPServer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/server/Server.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/server/Server.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/submit/SinglebandIngest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/submit/SinglebandIngest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/com/spark/demo/read/Test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/com/spark/demo/read/Test.scala" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +75,7 @@
   "keyToString": {
     "JavaClassFindUsagesOptions.isMethodsUsages": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/JavaConsist/AboutGeoServer/geoserver-dev",
+    "last_opened_file_path": "D:/JavaConsist/Project/spark-accumulo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,6 +97,7 @@
       <recent name="D:\JavaConsist\Project\spark_demo\src\test\scala\com\spark\demo\read" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaConsist\Project\spark_demo\src\main\resources\static" />
       <recent name="D:\JavaConsist\Project\spark_demo\src\main\resources\etljson" />
       <recent name="D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo" />
       <recent name="D:\JavaConsist\Project\spark_demo\src\main\scala" />
@@ -112,6 +124,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.spark.demo.read.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Count" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.spark.demo.test.Count" />
+      <module name="spark_demo" />
+      <shortenClasspath name="MANIFEST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.spark.demo.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,34 +187,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="transform" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.spark.demo.transform" />
-      <module name="spark_demo" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.spark.demo.submit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.Count" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Application.CreateIndex2Txt" />
       <item itemvalue="Application.AccumuloReader" />
       <item itemvalue="Application.Zilb" />
-      <item itemvalue="Application.transform" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Count" />
         <item itemvalue="Application.AccumuloReader" />
         <item itemvalue="Application.CreateIndex2Txt" />
         <item itemvalue="Application.Zilb" />
-        <item itemvalue="Application.transform" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +231,7 @@
       <workItem from="1679316508587" duration="56718000" />
       <workItem from="1679532089157" duration="90699000" />
       <workItem from="1680014056142" duration="56482000" />
-      <workItem from="1680193033012" duration="89654000" />
+      <workItem from="1680193033012" duration="129144000" />
     </task>
     <servers />
   </component>
