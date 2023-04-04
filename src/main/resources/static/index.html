@@ -30,7 +30,7 @@
     };
     //add the layers to the map
     L.control.layers(overlayMaps, {}, {collapsed: false}).addTo(map);
-    // base.addTo(map);
+    base.addTo(map);
     overlayMaps.NDVI.addTo(map);
     var drawControl = new L.Control.Draw({
         draw: {

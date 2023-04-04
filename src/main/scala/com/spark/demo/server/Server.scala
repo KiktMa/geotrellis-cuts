@@ -21,6 +21,9 @@ import com.typesafe.config.ConfigFactory
 import geotrellis.proj4.{CRS, LatLng}
 
 object Server {
+  /*
+  这里是将金字塔模型的瓦片存储在文件系统中时利用akka发布图层的服务
+   */
   implicit val system = ActorSystem("tutorial-system")
   implicit val executor = system.dispatcher
   implicit val materializer = ActorMaterializer()
@@ -70,7 +73,7 @@ object Server {
     } ~
       // Static content routes:
       pathEndOrSingleSlash {
-        getFromFile("static/index11.html")
+        getFromFile("static/index.html")
       } ~
       pathPrefix("") {
         getFromDirectory("static")

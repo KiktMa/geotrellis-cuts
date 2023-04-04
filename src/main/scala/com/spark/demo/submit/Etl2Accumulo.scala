@@ -33,10 +33,6 @@ object Etl2Accumulo {
   // spark 应用名称
   private val appName: String = "GeoTrellis2Accumulo"
 
-  // 切片等级
-  private val setZoom: Int = 8
-  private val tileSize: Int = 512
-
   private val sparkConf: SparkConf = new SparkConf()
     .setAppName(appName)
     .setMaster(master)
@@ -44,6 +40,11 @@ object Etl2Accumulo {
     .set("spark.kryo.registrator", "geotrellis.spark.io.kryo.KryoRegistrator")
 
   val sparkContext = new SparkContext(sparkConf)
+
+  /**
+   * 这个函数中的方法并没有进行封装，自己测试的时候用的
+   * @param args
+   */
   def main(args: Array[String]): Unit = {
     try {
       run(sparkContext)
@@ -83,13 +84,13 @@ object Etl2Accumulo {
       tileToLayout(rasterMetaData.cellType, rasterMetaData.layout, Bilinear)
 
     // 设置投影和瓦片大小
-    val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(WebMercator, tileSize)
+    val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(WebMercator, 512)
 
     val (maxZoom, reprojected) = TileLayerRDD(tiled, rasterMetaData)
       .reproject(WebMercator, layoutScheme, Bilinear)
 
-    Pyramid.upLevels(reprojected, layoutScheme, setZoom, Bilinear) { (rdd, z) =>
-      val layerId = LayerId("layer_name", z)
+    Pyramid.upLevels(reprojected, layoutScheme, 18, 10) { (rdd, z) =>
+      val layerId = LayerId("layer_"+dataTable, z)
       // 这里我们选择的是索引方式，希尔伯特和Z曲线两种方式选择
       writer.write(layerId, rdd, ZCurveKeyIndexMethod)
     }

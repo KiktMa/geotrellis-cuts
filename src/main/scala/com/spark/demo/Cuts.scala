@@ -62,6 +62,13 @@ object Cuts {
 
   val sparkContext = new SparkContext(sparkConf)
 
+  /**
+   * @param args args(0) tableName
+   *             args(1) path
+   *             args(2) part
+   *             args(3) startZoom
+   *             args(4) endZoom
+   */
   def main(args: Array[String]): Unit = {
     try {
       run(sparkContext,args(0),args(1),args(2),args(3),args(4))

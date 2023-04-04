@@ -25,6 +25,10 @@ import org.apache.accumulo.core.client.security.tokens.PasswordToken
 import org.apache.spark.{SparkConf, SparkContext}
 
 object WebServer {
+  /**
+   * 这里需在提交spark任务时加入一个参数
+   * @param args args(0)表示瓦片存储的表的表名
+   */
   def main(args: Array[String]): Unit = {
 
     val instanceName = "accumulo"
@@ -32,7 +36,7 @@ object WebServer {
     val user = "root"
     val password = "root"
 
-    val sparkConf = new SparkConf().setAppName("Server").setMaster("yarn")
+    val sparkConf = new SparkConf().setAppName("WebServer").setMaster("yarn")
     implicit val sparkContext: SparkContext = new SparkContext(sparkConf)
     // 创建 Accumulo 数据库连接
     implicit val instance: AccumuloInstance = AccumuloInstance("accumulo", "node1:2181,node2:2181,node3:2181",
@@ -42,7 +46,8 @@ object WebServer {
 //    val reader = AccumuloLayerReader(instance)
     attributeStore.layerIds
     //渲染色带
-    val etColormap = "0:ffffe5ff;1:f7fcb9ff;2:d9f0a3ff;3:addd8eff;4:78c679ff;5:41ab5dff;6:238443ff"
+    val etColormap = "0:#FEFEFE;1:#E0E0E0;2:#FEA67E;3:#37A700;4:#F9E500;5:#97E500;" +
+      "6:#7980E0;7:#818181;8:#999DD2;9:#955895;10:#FEFE00;11:#D89547;12:#D34A1A;13:#FEFEFE"
     val colorMapForRender = ColorMap.fromStringDouble(etColormap).get
 
     def rasterFunction(): Tile => Tile = {

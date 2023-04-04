@@ -32,12 +32,6 @@
             <version>4.10</version>
             <scope>provided</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.specs</groupId>-->
-<!--            <artifactId>specs</artifactId>-->
-<!--            <version>1.2.5</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_2.11</artifactId>
@@ -64,11 +58,6 @@
             <groupId>org.locationtech.geotrellis</groupId>
             <artifactId>geotrellis-raster_2.11</artifactId>
             <version>2.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.locationtech.geotrellis</groupId>
-            <artifactId>geotrellis-spark-etl_2.11</artifactId>
-            <version>2.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.locationtech.geotrellis</groupId>
@@ -99,26 +88,6 @@
             <groupId>org.locationtech.geotrellis</groupId>
             <artifactId>geotrellis-layer_2.11</artifactId>
             <version>3.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.azavea.geotrellis</groupId>
-            <artifactId>geotrellis-server-core_2.11</artifactId>
-            <version>4.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.azavea.geotrellis</groupId>
-            <artifactId>geotrellis-server-ogc_2.11</artifactId>
-            <version>4.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.locationtech.geomesa</groupId>
-            <artifactId>geomesa-accumulo-datastore_2.11</artifactId>
-            <version>2.4.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.locationtech.geomesa</groupId>
-            <artifactId>geomesa-spark-jts_2.11</artifactId>
-            <version>2.4.2</version>
         </dependency>
 
         <dependency>
@@ -202,31 +171,6 @@
             <artifactId>hadoop-hdfs</artifactId>
             <version>2.7.7</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-yarn-client</artifactId>
-            <version>2.7.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-yarn-api</artifactId>
-            <version>2.7.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-yarn-common</artifactId>
-            <version>2.7.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-yarn-server-common</artifactId>
-            <version>2.7.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-yarn-server-web-proxy</artifactId>
-            <version>2.7.7</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -267,6 +211,19 @@
                         <javacArg>-Xlint:unchecked</javacArg>
                         <javacArg>-Xlint:deprecation</javacArg>
                     </javacArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.example.Main</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
 

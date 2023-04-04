@@ -23,6 +23,13 @@ import org.apache.spark.{HashPartitioner, SparkConf, SparkContext}
 
 object SelfIndex {
 
+  /**
+   * 这里需要在提交spark任务时传入四个参数到main中的args()中
+   * @param inputPath 栅格数据在hdfs中的存储位置
+   * @param startZoom 金字塔模型的开始层，也即最底层
+   * @param endZoom 金字塔模型的结束层，也即最顶层
+   * @param tableName 金字塔瓦片存储的表名，需事先在accumulo数据库中创建表否则会在每个节点中自动创建很多表
+   */
   def makeslice(inputPath: String,startZoom:Int,endZoom:Int,tableName:String) = {
     val conf =
       new SparkConf()
@@ -75,7 +82,7 @@ object SelfIndex {
     //切片大小
     val tarlayoutScheme = ZoomedLayoutScheme(WebMercator, tileSize = 512)
 
-    val (18, reprojected): (Int, RDD[(SpatialKey, Tile)] with
+    val (_, reprojected): (Int, RDD[(SpatialKey, Tile)] with
       Metadata[TileLayerMetadata[SpatialKey]]) =
       TileLayerRDD(tiledRdd, rasterMetaData)
         .reproject(WebMercator, tarlayoutScheme, Bilinear)
