@@ -7,7 +7,7 @@ import geotrellis.raster.resample._
 import geotrellis.spark._
 import geotrellis.spark.Boundable
 import geotrellis.spark.io._
-import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloInstance, AccumuloLayerReader, AccumuloLayerWriter, AccumuloValueReader, AccumuloWriteStrategy, HdfsWriteStrategy}
+import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloInstance, AccumuloLayerDeleter, AccumuloLayerReader, AccumuloLayerWriter, AccumuloValueReader, AccumuloWriteStrategy, HdfsWriteStrategy}
 import geotrellis.spark.io.file._
 import geotrellis.spark.io.hadoop._
 import geotrellis.spark.io.index._
@@ -63,12 +63,14 @@ object Etl2Accumulo {
     val strat: AccumuloWriteStrategy = HdfsWriteStrategy(new Path(hadoopInPath))
 
     val opts: AccumuloLayerWriter.Options = AccumuloLayerWriter.Options(strat)
+
     implicit val instance: AccumuloInstance = AccumuloInstance(
       instanceName,
       zookeeper,
       user,
       token
     )
+    val attributeStore = AccumuloAttributeStore(instance)
     //    val store: AttributeStore = AccumuloAttributeStore(instance)
     //    val reader = AccumuloLayerReader(instance)
     val writer = AccumuloLayerWriter(instance, dataTable, opts)
@@ -77,7 +79,7 @@ object Etl2Accumulo {
     val geoRDD: RDD[(ProjectedExtent, Tile)] = sparkContext.hadoopGeoTiffRDD(hadoopInPath)
 
     // 创建元数据信息
-    val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoRDD, FloatingLayoutScheme(512))
+    val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoRDD, FloatingLayoutScheme(256))
 
     // 创建切片RDD
     val tiled: RDD[(SpatialKey, Tile)] = geoRDD.
@@ -91,6 +93,9 @@ object Etl2Accumulo {
 
     Pyramid.upLevels(reprojected, layoutScheme, 18, 10) { (rdd, z) =>
       val layerId = LayerId("layer_"+dataTable, z)
+      if (attributeStore.layerExists(layerId)) {
+        AccumuloLayerDeleter(attributeStore).delete(layerId)
+      }
       // 这里我们选择的是索引方式，希尔伯特和Z曲线两种方式选择
       writer.write(layerId, rdd, ZCurveKeyIndexMethod)
     }

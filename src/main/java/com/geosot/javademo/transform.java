@@ -1,4 +1,4 @@
-package com.spark.demo;
+package com.geosot.javademo;
 
 import javax.imageio.stream.FileImageOutputStream;
 import java.io.File;

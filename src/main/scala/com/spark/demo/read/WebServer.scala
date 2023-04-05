@@ -46,9 +46,8 @@ object WebServer {
 //    val reader = AccumuloLayerReader(instance)
     attributeStore.layerIds
     //渲染色带
-    val etColormap = "0:#FEFEFE;1:#E0E0E0;2:#FEA67E;3:#37A700;4:#F9E500;5:#97E500;" +
-      "6:#7980E0;7:#818181;8:#999DD2;9:#955895;10:#FEFE00;11:#D89547;12:#D34A1A;13:#FEFEFE"
-    val colorMapForRender = ColorMap.fromStringDouble(etColormap).get
+//    val etColormap = "0:ffffe5ff;1:f7fcb9ff;2:d9f0a3ff;3:addd8eff;4:78c679ff;5:41ab5dff;6:238443ff"
+//    val colorMapForRender = ColorMap.fromStringDouble(etColormap).get
 
     def rasterFunction(): Tile => Tile = {
       tile: Tile => tile.convert(DoubleConstantNoDataCellType)
@@ -75,13 +74,14 @@ object WebServer {
 //            val key1 = bounds.minKey
 //            val key2 = bounds.maxKey
             val tile: Tile = valueReader.read(SpatialKey(x,y))
-            val product: Tile = fn(tile)
-            val cm: ColorMap = colorMapForRender
-            val png: Png = product.renderPng(cm)
+//            val product: Tile = fn(tile)
+//            val cm: ColorMap = colorMapForRender
+//            val png: Png = product.renderPng(cm)
+//            val bytes = tile.toBytes()
 
-            //            val pngBytes: Array[Byte] = tile.renderPng().bytes // 如果为空，返回空数组
+            val pngBytes: Array[Byte] = tile.renderPng().bytes // 如果为空，返回空数组
             // 返回 HTTP 响应，内容类型为 image/png，内容为字节数组
-            complete(HttpEntity(ContentType(MediaTypes.`image/png`), png.bytes))
+            complete(HttpEntity(ContentType(MediaTypes.`image/png`), pngBytes))
           }
         } ~
           // Polygonal summary route:

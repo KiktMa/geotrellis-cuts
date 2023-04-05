@@ -1,13 +1,12 @@
 package com.spark.demo.index
 
+//import com.geosot.javademo.geosot.GeoSot
 import geotrellis.proj4.WebMercator
-import geotrellis.raster.Tile
-import geotrellis.raster.io.geotiff.{SinglebandGeoTiff, Tags}
-import geotrellis.raster.io.geotiff.reader.GeoTiffReader
-import geotrellis.raster.io.geotiff.writer.GeoTiffWriter
+import geotrellis.raster.{CellType, Tile}
 import geotrellis.raster.resample.Bilinear
-import geotrellis.spark.io.{SpaceTimeKeyFormat, SpatialKeyFormat, tileLayerMetadataFormat}
-import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloCollectionLayerReader, AccumuloInstance, AccumuloLayerWriter, AccumuloValueReader}
+import geotrellis.spark.io.{LayerType, SpaceTimeKeyFormat, SpatialKeyFormat, tileLayerMetadataFormat}
+import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloCollectionLayerReader, AccumuloInstance, AccumuloLayerDeleter, AccumuloLayerWriter, AccumuloValueReader}
+import geotrellis.spark.io.file.FileLayerHeader
 import geotrellis.spark.{KeyBounds, LayerId, Metadata, SpaceTimeKey, SpatialKey, TemporalProjectedExtent, TileLayerMetadata, TileLayerRDD, withCollectMetadataMethods, withTilerMethods}
 import geotrellis.spark.io.hadoop.{HadoopGeoTiffReader, HadoopSparkContextMethodsWrapper}
 import geotrellis.spark.io.index.ZCurveKeyIndexMethod
@@ -15,12 +14,8 @@ import geotrellis.spark.pyramid.Pyramid
 import geotrellis.spark.tiling.{FloatingLayoutScheme, Tiler, ZoomedLayoutScheme}
 import geotrellis.vector.ProjectedExtent
 import org.apache.accumulo.core.client.security.tokens.PasswordToken
-import org.apache.commons.httpclient.URI
-import org.apache.hadoop.conf.Configuration
-import org.apache.hadoop.fs.{FileSystem, Path}
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{HashPartitioner, SparkConf, SparkContext}
-
 object SelfIndex {
 
   /**
@@ -95,23 +90,35 @@ object SelfIndex {
 
     //创建accumulo存储对象
     val accumuloInstance: AccumuloInstance = AccumuloInstance(instance, zookeepers, user, new PasswordToken(password))
-    // val attributeStore = AccumuloAttributeStore(accumuloInstance, tablename)
+    val attributeStore = AccumuloAttributeStore(accumuloInstance)
     // val valueReader = AccumuloValueReader(accumuloInstance, attributeStore, LayerId("layerId", 18))
     val writer = AccumuloLayerWriter(accumuloInstance, tableName)
 
     //创建金字塔并进行切片，保存至accumulo
     Pyramid.upLevels(reprojected, tarlayoutScheme,startZoom, endZoom, Bilinear) { (rdd, z) =>
       val layerId = LayerId("layer_"+tableName, z)
+
+//      val tilesWithMetadata: RDD[(SpatialKey, Tile, TileLayerMetadata[String])] = rdd.map { case (key, tile) =>
+//        val tileCode = GeoSot.INSTANCE.getHexCode(rdd.metadata.extent.center.y, rdd.metadata.extent.center.x, 0, z)
+//        val metaData = TileLayerMetadata(
+//          cellType = tile.cellType,
+//          layout = rdd.metadata.layout,
+//          extent = rdd.metadata.mapTransform(key),
+//          crs = rdd.metadata.crs,
+//          bounds = KeyBounds(tileCode, tileCode)
+//        )
+//        (key, tile, metaData)
+//      }
 //      val indexKeyBounds: KeyBounds[SpatialKey] = {
-//        val KeyBounds(minKey, maxKey) = rdd.metadata.bounds.get // assuming non-empty layer
-//              KeyBounds(
-//                minKey.formatted(""),
-//                maxKey.formatted("")
-//              )
+//        val KeyBounds(minKey, maxKey):KeyBounds[SpatialKey] = tilesWithMetadata.keyBy((S) =>S._1)
 //        KeyBounds(minKey, maxKey)
 //      }
 //      val keyIndex =
 //        ZCurveKeyIndexMethod.createIndex(indexKeyBounds)
+//
+      if (attributeStore.layerExists(layerId)) {
+        AccumuloLayerDeleter(attributeStore).delete(layerId)
+      }
       writer.write(layerId, rdd, ZCurveKeyIndexMethod)
     }
     sc.stop()

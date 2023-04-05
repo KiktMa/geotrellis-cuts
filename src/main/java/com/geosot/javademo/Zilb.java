@@ -1,4 +1,4 @@
-package com.spark.demo;
+package com.geosot.javademo;
 
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;

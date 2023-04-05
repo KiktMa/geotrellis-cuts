@@ -12,7 +12,7 @@ import geotrellis.raster.io.{CellSizeFormat, CellTypeFormat}
 import geotrellis.spark._
 import geotrellis.spark.TileLayerMetadata.toLayoutDefinition
 import geotrellis.spark.io._
-import geotrellis.spark.io.accumulo.{AccumuloInstance, AccumuloLayerWriter}
+import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloInstance, AccumuloLayerDeleter, AccumuloLayerWriter}
 import geotrellis.spark.io.file._
 import geotrellis.spark.io.hadoop._
 import geotrellis.spark.io.index._
@@ -59,16 +59,20 @@ object GeoTiffPy {
     val accumuloUser = "root"
     val zookeeper = "node1:2181,node2:2181,node3:2181"
     val accumuloPassword = new PasswordToken("root")
-
+    val instance = AccumuloInstance(
+      accumuloInstance, zookeeper, accumuloUser, accumuloPassword)
+    val attributeStore = AccumuloAttributeStore(instance)
     for ((zoom, layerMetadata) <- pyramid) {
       val layerId = LayerId(s"layer_"+args(2),zoom)
       val layerRdd: RDD[(SpatialKey, Tile)] = rasterSourceRDD
         .tileToLayout(layerMetadata.metadata.cellType, toLayoutDefinition(layerMetadata.metadata), Bilinear)
 
       val accRdd = ContextRDD(layerRdd, layerMetadata.metadata)
+      if (attributeStore.layerExists(layerId)) {
+        AccumuloLayerDeleter(attributeStore).delete(layerId)
+      }
       // 创建 Accumulo 实例并写入数据
-      AccumuloLayerWriter(AccumuloInstance(
-        accumuloInstance,zookeeper,accumuloUser,accumuloPassword),args(1))
+      AccumuloLayerWriter(instance,args(1))
         .write(layerId, accRdd ,ZCurveKeyIndexMethod)
     }
     sc.stop()

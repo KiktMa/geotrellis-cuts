@@ -77,6 +77,8 @@ object GeoTrellisAccumulo {
     implicit val instance: AccumuloInstance =
       AccumuloInstance(accumuloInstance, zookeepers, user, new PasswordToken(password))
 
+    val attributeStore = AccumuloAttributeStore(instance)
+
     // Read the GeoTiff file from HDFS
     val uri = new Path("hdfs://node1:9000/tiff/caijian_zhuanhuan.tif")
     val geoTiff: RDD[(ProjectedExtent, Tile)] = sc.hadoopGeoTiffRDD(uri)
@@ -85,7 +87,7 @@ object GeoTrellisAccumulo {
     val raster = geoTiff.rdd
 
     // Define the layer name and zoom level
-    val layerName = "my-layer"
+    val layerName = "layer_"+table
     val zoomLevel = 18
 
     // Define the layout scheme based on the zoom level and tile size
@@ -101,8 +103,13 @@ object GeoTrellisAccumulo {
 
     // Create an Accumulo layer writer for the given table
     val writer = AccumuloLayerWriter(instance, table)
+    val layerId = LayerId(layerName, zoomLevel)
+
+    if (attributeStore.layerExists(layerId)) {
+      AccumuloLayerDeleter(attributeStore).delete(layerId)
+    }
 
     // Write the tiles to the database with row key (column, row, zoom level) and metadata (extent, crs)
-    writer.write(LayerId(layerName,zoomLevel), tiledRaster,ZCurveKeyIndexMethod)
+    writer.write(layerId, tiledRaster,ZCurveKeyIndexMethod)
   }
 }

@@ -1,6 +1,7 @@
-package com.spark.demo;
+package com.geosot.javademo;
 
-import com.spark.demo.geosot.GeoSot;
+import com.geosot.javademo.geosot.GeoSot;
+
 import java.io.*;
 public class CreateIndex2Txt {
     public static void main(String[] args) {

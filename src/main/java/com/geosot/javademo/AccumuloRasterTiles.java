@@ -1,4 +1,4 @@
-package com.spark.demo;
+package com.geosot.javademo;
 
 import org.apache.accumulo.core.client.*;
 import org.apache.accumulo.core.client.security.tokens.PasswordToken;

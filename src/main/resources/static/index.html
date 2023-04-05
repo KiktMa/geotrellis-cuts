@@ -17,27 +17,27 @@
 </div>
 <script type="text/javascript">
     //create the tile layers
-    var ndvi = new L.tileLayer("http://192.168.163.131:9090/map/{z}/{x}/{y}", {minZoom: 10, maxZoom: 18});
-    var ndwi = new L.tileLayer("http://localhost:8080/ndwi/{z}/{x}/{y}", {maxNativeZoom: 10, maxZoom: 18});
+    // var ndvi = new L.tileLayer("http://192.168.163.131:9090/map/{z}/{x}/{y}", {maxNativeZoom: 19, maxZoom: 19});
+    // var ndwi = new L.tileLayer("http://192.168.163.131:9090/map/summary/{z}", {maxNativeZoom: 10, maxZoom: 18});
     var base = new L.tileLayer("http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png");
     //link leaflet map with html
     var map = L.map('map');
     map.setView([27.596977972222223, 91.97385008333333], 18);
     //create an overlay object
     var overlayMaps = {
-        "NDVI": ndvi,
-        "NDWI": ndwi
+        // "NDVI": ndvi,
+        // "NDWI": ndwi
     };
     //add the layers to the map
     L.control.layers(overlayMaps, {}, {collapsed: false}).addTo(map);
     base.addTo(map);
-    overlayMaps.NDVI.addTo(map);
+    // overlayMaps.NDVI.addTo(map);
     var drawControl = new L.Control.Draw({
         draw: {
-            circle: false,
-            marker: false,
-            polyline: false,
-            circlemarker: false
+            circle: true,
+            marker: true,
+            polyline: true,
+            circlemarker: true
         }
     });
     map.addControl(drawControl);
@@ -48,14 +48,16 @@
         layer.bindPopup("waiting...");
 
         var feature = layer.toGeoJSON()
+        console.log(feature)
         var postBody = JSON.stringify(feature.geometry)
         var zoom = map.getZoom()
-        $.post("/ndvi/"+zoom+"/summary", postBody, function (data, status) {
-            var msg = "Zoom: " + zoom + "<br/>" +
-                "NDVI min: "+ data[0] + "<br/>" +
-                "NDVI max: " + data[1];
-            layer.bindPopup(msg)
-        });
+        console.log(zoom)
+        // $.post("/ndvi/"+zoom+"/summary", postBody, function (data, status) {
+        //     var msg = "Zoom: " + zoom + "<br/>" +
+        //         "NDVI min: "+ data[0] + "<br/>" +
+        //         "NDVI max: " + data[1];
+        //     layer.bindPopup(msg)
+        // });
         map.addLayer(layer);
     });
 

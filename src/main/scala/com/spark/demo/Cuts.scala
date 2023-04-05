@@ -1,6 +1,8 @@
 package com.spark.demo
 
 //import com.spark.demo.geosot.GeoSot
+
+//import com.geosot.javademo.geosot.GeoSot
 import com.vividsolutions.jts.geom.GeometryFactory
 import com.vividsolutions.jts.io.WKTReader
 import com.vividsolutions.jts.operation.valid.IsValidOp
@@ -14,7 +16,6 @@ import geotrellis.spark.io._
 import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloInstance, AccumuloLayerDeleter, AccumuloLayerReader, AccumuloLayerWriter}
 import geotrellis.spark.io.file._
 import geotrellis.spark.io.hadoop._
-import geotrellis.spark.io.hbase.{HBaseInstance, HBaseLayerWriter}
 import geotrellis.spark.io.index._
 import geotrellis.spark.io.kryo.KryoRegistrator
 import org.apache.spark.serializer.KryoSerializer
@@ -89,7 +90,7 @@ object Cuts {
     val geoRDD: RDD[(ProjectedExtent, Tile)] = sparkContext.hadoopGeoTiffRDD(path)
 
     //    创建元数据信息
-    val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoRDD, FloatingLayoutScheme(256))
+    val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoRDD, FloatingLayoutScheme(512))
 
     //    创建切片RDD
     val tiled: RDD[(SpatialKey, Tile)] = geoRDD.
@@ -99,7 +100,7 @@ object Cuts {
      .repartition(part.toInt)
 
     //    设置投影和瓦片大小
-    val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(WebMercator, tileSize = 512)
+    val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(WebMercator, tileSize = 256)
 
     val (_, reprojected) = TileLayerRDD(tiled, rasterMetaData)
       .reproject(WebMercator, layoutScheme, Bilinear)
@@ -119,7 +120,7 @@ object Cuts {
 //      s"${code}"
 //    }
 
-    Pyramid.upLevels(reprojected, layoutScheme,startZoom.toInt, endZoom.toInt, Bilinear) { (rdd, z) =>
+    Pyramid.upLevels(reprojected, layoutScheme, startZoom.toInt, endZoom.toInt, Bilinear) { (rdd, z) =>
       val layerId = LayerId("layer_"+tableName, z)
       if(attributeStore.layerExists(layerId)){
         AccumuloLayerDeleter(attributeStore).delete(layerId)
