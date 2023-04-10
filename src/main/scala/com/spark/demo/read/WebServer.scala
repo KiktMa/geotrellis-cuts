@@ -13,6 +13,7 @@ import akka.http.scaladsl.Http
 import akka.http.scaladsl.model._
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport._
+import akka.http.scaladsl.model.headers.{`Access-Control-Allow-Credentials`, `Access-Control-Allow-Headers`, `Access-Control-Max-Age`}
 import spray.json._
 import akka.stream.{ActorMaterializer, Materializer}
 import spray.json.DefaultJsonProtocol._
@@ -24,60 +25,72 @@ import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloCollectionL
 import org.apache.accumulo.core.client.security.tokens.PasswordToken
 import org.apache.spark.{SparkConf, SparkContext}
 
-object WebServer {
+object WebServer extends CorsSupport {
   /**
    * 这里需在提交spark任务时加入一个参数
    * @param args args(0)表示瓦片存储的表的表名
    */
+  val instanceName = "accumulo"
+  val zookeepers = "node1:2181,node2:2181,node3:2181"
+  val user = "root"
+  val password = "root"
+
+  val sparkConf = new SparkConf().setAppName("WebServer").setMaster("yarn")
+  implicit val sparkContext: SparkContext = new SparkContext(sparkConf)
+  // 创建 Accumulo 数据库连接
+  implicit val instance: AccumuloInstance = AccumuloInstance("accumulo", "node1:2181,node2:2181,node3:2181",
+    "root", new PasswordToken("root"))
+  implicit val attributeStore = AccumuloAttributeStore(instance.connector)
+  val collectionLayerReader = AccumuloCollectionLayerReader(instance)
+  //    val reader = AccumuloLayerReader(instance)
+  attributeStore.layerIds
+  //渲染色带
+  val etColormap = "0:fefefeff; 1:e0e0e0ff;2:fea67eff; 3:37a700ff; 4:f9e500ff; 5:97e500ff; 6:79b5f4ff;" +
+    "7:818181ff; 8:999dd2ff; 9:955895ff; 10:fefe00ff; 11:d89447ff; 12:d34a1aff; 13:fefefeff; 14:000000ff"
+  val colorMapForRender = ColorMap.fromStringDouble(etColormap).get
+
+  def rasterFunction(): Tile => Tile = {
+    tile: Tile => tile.convert(DoubleConstantNoDataCellType)
+  }
+
+  def pngAsHttpResponse(png: Png): HttpResponse =
+    HttpResponse(entity = HttpEntity(ContentType(MediaTypes.`image/png`), png.bytes))
+
+  implicit val system: ActorSystem = ActorSystem("my-system")
+  implicit val materializer: ActorMaterializer = ActorMaterializer()
+  implicit val executionContext: ExecutionContextExecutor = system.dispatcher
+
+  override val corsAllowOrigins: List[String] = List("*")
+
+  override val corsAllowedHeaders: List[String] = List("Origin", "X-Requested-With", "Content-Type", "Accept", "Accept-Encoding", "Accept-Language", "Host", "Referer", "User-Agent")
+
+  override val corsAllowCredentials: Boolean = true
+
+  override val optionsCorsHeaders: List[HttpHeader] = List[HttpHeader](
+    `Access-Control-Allow-Headers`(corsAllowedHeaders.mkString(", ")),
+    `Access-Control-Max-Age`(60 * 60 * 24 * 20), // cache pre-flight response for 20 days
+    `Access-Control-Allow-Credentials`(corsAllowCredentials)
+  )
   def main(args: Array[String]): Unit = {
 
-    val instanceName = "accumulo"
-    val zookeepers = "node1:2181,node2:2181,node3:2181"
-    val user = "root"
-    val password = "root"
-
-    val sparkConf = new SparkConf().setAppName("WebServer").setMaster("yarn")
-    implicit val sparkContext: SparkContext = new SparkContext(sparkConf)
-    // 创建 Accumulo 数据库连接
-    implicit val instance: AccumuloInstance = AccumuloInstance("accumulo", "node1:2181,node2:2181,node3:2181",
-      "root", new PasswordToken("root"))
-    implicit val attributeStore = AccumuloAttributeStore(instance.connector)
-    val collectionLayerReader = AccumuloCollectionLayerReader(instance)
-//    val reader = AccumuloLayerReader(instance)
-    attributeStore.layerIds
-    //渲染色带
-//    val etColormap = "0:ffffe5ff;1:f7fcb9ff;2:d9f0a3ff;3:addd8eff;4:78c679ff;5:41ab5dff;6:238443ff"
-//    val colorMapForRender = ColorMap.fromStringDouble(etColormap).get
-
-    def rasterFunction(): Tile => Tile = {
-      tile: Tile => tile.convert(DoubleConstantNoDataCellType)
-    }
-
-    def pngAsHttpResponse(png: Png): HttpResponse =
-      HttpResponse(entity = HttpEntity(ContentType(MediaTypes.`image/png`), png.bytes))
-
-    implicit val system: ActorSystem = ActorSystem("my-system")
-    implicit val materializer: ActorMaterializer = ActorMaterializer()
-    implicit val executionContext: ExecutionContextExecutor = system.dispatcher
-
-    // 定义路由规则，响应客户端请求
-    val route =
+    val route = cors {
       pathPrefix("map" / IntNumber) { zoom =>
         val fn: Tile => Tile = rasterFunction()
-        val layerId = LayerId("layer_"+args(0), zoom)
+        val layerId = LayerId("layer_" + args(0), zoom)
         path(IntNumber / IntNumber) { (x, y) =>
           get {
             val valueReader: Reader[SpatialKey, Tile] = AccumuloValueReader(
               instance, attributeStore, layerId)
             val metadata = attributeStore.readMetadata[TileLayerMetadata[SpatialKey]](layerId)
-//            val bounds = metadata.bounds.get
-//            val key1 = bounds.minKey
-//            val key2 = bounds.maxKey
-            val tile: Tile = valueReader.read(SpatialKey(x,y))
-//            val product: Tile = fn(tile)
-//            val cm: ColorMap = colorMapForRender
-//            val png: Png = product.renderPng(cm)
-//            val bytes = tile.toBytes()
+            //            val bounds = metadata.bounds.get
+            //            val key1 = bounds.minKey
+            //            val key2 = bounds.maxKey
+            val tile: Tile = valueReader.read(SpatialKey(x, y))
+
+            //            val product: Tile = fn(tile)
+            //            val cm: ColorMap = colorMapForRender
+            //            val png: Png = product.renderPng(cm)
+            //            val bytes = tile.toBytes()
 
             val pngBytes: Array[Byte] = tile.renderPng().bytes // 如果为空，返回空数组
             // 返回 HTTP 响应，内容类型为 image/png，内容为字节数组
@@ -111,8 +124,8 @@ object WebServer {
               }
             }
           }
-        }
-
+      }
+    }
 
     // 启动 HTTP 服务器，监听端口9090
     val bindingFuture = Http().bindAndHandle(route, "192.168.163.131", 9090)
