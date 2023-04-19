@@ -17,7 +17,7 @@
 </div>
 <script type="text/javascript">
     //create the tile layers
-    // var ndvi = new L.tileLayer("http://192.168.163.131:9090/map/{z}/{x}/{y}", {maxNativeZoom: 19, maxZoom: 19});
+    var ndvi = new L.tileLayer("http://192.168.163.131:9090/map/{z}/{x}/{y}", {maxNativeZoom: 21, maxZoom: 21});
     // var ndwi = new L.tileLayer("http://192.168.163.131:9090/map/summary/{z}", {maxNativeZoom: 10, maxZoom: 18});
     var base = new L.tileLayer("http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png");
     //link leaflet map with html
@@ -25,13 +25,13 @@
     map.setView([27.596977972222223, 91.97385008333333], 18);
     //create an overlay object
     var overlayMaps = {
-        // "NDVI": ndvi,
+        "DaWang": ndvi,
         // "NDWI": ndwi
     };
     //add the layers to the map
     L.control.layers(overlayMaps, {}, {collapsed: false}).addTo(map);
     base.addTo(map);
-    // overlayMaps.NDVI.addTo(map);
+    overlayMaps.NDVI.addTo(map);
     var drawControl = new L.Control.Draw({
         draw: {
             circle: true,

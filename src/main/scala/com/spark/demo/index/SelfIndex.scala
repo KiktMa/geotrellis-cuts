@@ -1,6 +1,5 @@
 package com.spark.demo.index
 
-//import com.geosot.javademo.geosot.GeoSot
 import geotrellis.proj4.WebMercator
 import geotrellis.raster.{CellType, Tile}
 import geotrellis.raster.resample.Bilinear
@@ -11,6 +10,7 @@ import geotrellis.spark.{KeyBounds, LayerId, Metadata, SpaceTimeKey, SpatialKey,
 import geotrellis.spark.io.hadoop.{HadoopGeoTiffReader, HadoopSparkContextMethodsWrapper}
 import geotrellis.spark.io.index.ZCurveKeyIndexMethod
 import geotrellis.spark.pyramid.Pyramid
+import geotrellis.spark.ContextRDD
 import geotrellis.spark.tiling.{FloatingLayoutScheme, Tiler, ZoomedLayoutScheme}
 import geotrellis.vector.ProjectedExtent
 import org.apache.accumulo.core.client.security.tokens.PasswordToken
@@ -99,23 +99,24 @@ object SelfIndex {
       val layerId = LayerId("layer_"+tableName, z)
 
 //      val tilesWithMetadata: RDD[(SpatialKey, Tile, TileLayerMetadata[String])] = rdd.map { case (key, tile) =>
-//        val tileCode = GeoSot.INSTANCE.getHexCode(rdd.metadata.extent.center.y, rdd.metadata.extent.center.x, 0, z)
+//        val topLeftCode = GeoSot.INSTANCE.getHexCode(rdd.metadata.extent.xmin, rdd.metadata.extent.ymax, 0, z)
+//        val bottomRightCode = GeoSot.INSTANCE.getHexCode(rdd.metadata.extent.xmax, rdd.metadata.extent.ymin, 0, z)
 //        val metaData = TileLayerMetadata(
 //          cellType = tile.cellType,
 //          layout = rdd.metadata.layout,
 //          extent = rdd.metadata.mapTransform(key),
 //          crs = rdd.metadata.crs,
-//          bounds = KeyBounds(tileCode, tileCode)
+//          bounds = KeyBounds(topLeftCode, bottomRightCode)
 //        )
 //        (key, tile, metaData)
 //      }
 //      val indexKeyBounds: KeyBounds[SpatialKey] = {
-//        val KeyBounds(minKey, maxKey):KeyBounds[SpatialKey] = tilesWithMetadata.keyBy((S) =>S._1)
+//        val KeyBounds(minKey, maxKey):KeyBounds[SpatialKey] = tilesWithMetadata.foreach((S) => S._1)
 //        KeyBounds(minKey, maxKey)
 //      }
 //      val keyIndex =
 //        ZCurveKeyIndexMethod.createIndex(indexKeyBounds)
-//
+
       if (attributeStore.layerExists(layerId)) {
         AccumuloLayerDeleter(attributeStore).delete(layerId)
       }

@@ -1,4 +1,4 @@
-package com.geosot.javademo.geosot;
+package com.spark.demo.index;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;

@@ -2,7 +2,7 @@ package com.spark.demo
 
 //import com.spark.demo.geosot.GeoSot
 
-//import com.geosot.javademo.geosot.GeoSot
+//import com.spark.demo.index.GeoSot
 import com.vividsolutions.jts.geom.GeometryFactory
 import com.vividsolutions.jts.io.WKTReader
 import com.vividsolutions.jts.operation.valid.IsValidOp

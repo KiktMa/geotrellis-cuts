@@ -2,12 +2,14 @@ package com.spark.demo
 
 import com.spark.demo.read.WebServer.sparkContext
 import geotrellis.proj4.CRS
-import geotrellis.raster.io.geotiff.GeoTiff
-import geotrellis.raster.{Raster, Tile}
-import geotrellis.spark.io.{SpatialKeyFormat, tileLayerMetadataFormat}
+import geotrellis.raster.io.geotiff.{GeoTiff, SinglebandGeoTiff}
+import geotrellis.raster.{DoubleConstantNoDataCellType, Raster, Tile}
+import geotrellis.spark.io.AttributeStore.Fields
+import geotrellis.spark.io.{Reader, SpatialKeyFormat, tileLayerMetadataFormat}
 import geotrellis.spark.{LayerId, SpatialKey, TileLayerMetadata}
-import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloCollectionLayerReader, AccumuloInstance, AccumuloLayerReader}
-import geotrellis.vector.Extent
+import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloCollectionLayerReader, AccumuloInstance, AccumuloLayerReader, AccumuloValueReader}
+import geotrellis.vector.{Extent, Polygon}
+import geotrellis.vector.io.json.{GeoJson, JsonFeatureCollection}
 import org.apache.accumulo.core.client.security.tokens.PasswordToken
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -32,7 +34,7 @@ object Test {
   def readRegion(layerId: LayerId):Unit = {
     
 //    val metadata = attrStore.readMetadata[TileLayerMetadata[SpatialKey]](layerId)
-
+//
 //    val maskz: String = "{\n" +
 //      "      \"type\": \"FeatureCollection\"\n" +
 //      "      ,\n" +
@@ -73,7 +75,7 @@ object Test {
 //      "      }\n" +
 //      "      ]\n" +
 //      "    }"
-
+//
 //    val geoJson = GeoJson.parse(maskz)
 //    val features = geoJson.asInstanceOf[JsonFeatureCollection].getAllPolygons()
 //    val poly = features.headOption.getOrElse(throw new Exception("No polygon found"))
@@ -95,24 +97,26 @@ object Test {
 //
 //    val result: (Double, Double) =
 //      queryHist.minMaxValues().getOrElse((Double.NaN, Double.NaN))
-
-    //    val tilesRdd = collectionLayerReader.read[SpatialKey, Tile, TileLayerMetadata[SpatialKey]](layerId)
-    //    val rows = metadata.bounds
+//
+//        val tilesRdd = collectionLayerReader.read[SpatialKey, Tile, TileLayerMetadata[SpatialKey]](layerId)
+//        val rows = metadata.bounds
 //    println(metadata.toString + "\n" + result.swap)
   }
 
   def test(layerId: LayerId): Unit = {
-    //    val valueReader: Reader[SpatialKey, Tile] = AccumuloValueReader(instance, attrStore, layerId)
-    //    val metadata = attrStore.readMetadata(layerId)
-    //    val tile:Tile = valueReader.read(metadata)
+//    val valueReader: Reader[SpatialKey, Tile] = AccumuloValueReader(instance, attrStore, layerId)
+//    val metadata = attrStore.readMetadata(layerId)
+//    val tile:Tile = valueReader.read(metadata)
+//    val rep = tile.reproject(new Extent(0.0, 0, 0, 0), CRS.fromEpsgCode(3857), CRS.fromEpsgCode(3857)).tile
     //    val maskedTile = {
-    //      val poly = maskz.parseGeoJson[Polygon]
-    //      val extent: Extent = attrStore.read[TileLayerMetadata[SpatialKey]](LayerId("LayerName", 18), Fields.metadata).mapTransform(SpatialKey(0,0))
-    //      tile.mask(extent, poly.geom)
-    //    }
+//      val poly = maskz.parseGeoJson[Polygon]
+//      val extent: Extent = attrStore.read[TileLayerMetadata[SpatialKey]](LayerId("LayerName", 18), Fields.metadata).mapTransform(SpatialKey(0,0))
+//      tile.mask(extent, poly.geom)
+//    }
     val tileLayerRDD = layerReader.read[SpatialKey, Tile, TileLayerMetadata[SpatialKey]](layerId)
     //    tileLayerRDD.saveAsTextFile("")
     val tileLayer: Raster[Tile] = tileLayerRDD.stitch()
+      .crop(extent = Extent(10237450.287, 3196984.713, 10239779.287, 3199173.213))
     //    val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(LatLng, tileSize = 512)
     //    val topLeft = Pyramid.levelStream(tileLayerRDD, layoutScheme, 18, 18).map(md => {
     //      val layout = md._2.metadata.layout
@@ -124,6 +128,6 @@ object Test {
     //
     //    })
     //    topLeft.foreach(println)
-    GeoTiff(tileLayer._1, Extent(10237450.287, 3196984.713, 10239779.287, 3199173.213), CRS.fromEpsgCode(3857)).write("/app/tif/test.tif")
+    GeoTiff(tileLayer.reproject(CRS.fromEpsgCode(3857),CRS.fromEpsgCode(3857)), CRS.fromEpsgCode(3857)).write("/app/tif/test.tif")
   }
 }

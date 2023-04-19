@@ -45,9 +45,13 @@ object WebServer extends CorsSupport {
   //    val reader = AccumuloLayerReader(instance)
   attributeStore.layerIds
   //渲染色带
-  val etColormap = "0:fefefeff; 1:e0e0e0ff;2:fea67eff; 3:37a700ff; 4:f9e500ff; 5:97e500ff; 6:79b5f4ff;" +
-    "7:818181ff; 8:999dd2ff; 9:955895ff; 10:fefe00ff; 11:d89447ff; 12:d34a1aff; 13:fefefeff; 14:000000ff"
-  val colorMapForRender = ColorMap.fromStringDouble(etColormap).get
+//  val etColormap = "0:fefefeff; 1:e0e0e0ff;2:fea67eff; 3:37a700ff; 4:f9e500ff; 5:97e500ff; 6:79b5f4ff;" +
+//    "7:818181ff; 8:999dd2ff; 9:955895ff; 10:fefe00ff; 11:d89447ff; 12:d34a1aff; 13:fefefeff; 14:000000ff"
+//  val colorMapForRender = ColorMap.fromStringDouble(etColormap).get
+  val colorMapForRender = ColorMap(Map(0 -> RGB(254,254,254), 1 -> RGB(224,224,224),
+  2 -> RGB(254,166,126),3 -> RGB(55,167,0),4 -> RGB(249,229,0),5 -> RGB(151,229,0),6 -> RGB(121,181,244),
+  7 -> RGB(129,129,129),8 -> RGB(153,157,210),9 -> RGB(149,88,149),10 -> RGB(254,254,0),11 -> RGB(216,149,71),
+  12 -> RGB(211,74,26),13 -> RGB(254,254,254),14 -> RGB(0,0,0)))
 
   def rasterFunction(): Tile => Tile = {
     tile: Tile => tile.convert(DoubleConstantNoDataCellType)
