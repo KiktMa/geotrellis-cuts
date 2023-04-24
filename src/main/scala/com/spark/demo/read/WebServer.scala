@@ -86,19 +86,19 @@ object WebServer extends CorsSupport {
             val valueReader: Reader[SpatialKey, Tile] = AccumuloValueReader(
               instance, attributeStore, layerId)
             val metadata = attributeStore.readMetadata[TileLayerMetadata[SpatialKey]](layerId)
-            //            val bounds = metadata.bounds.get
-            //            val key1 = bounds.minKey
-            //            val key2 = bounds.maxKey
+            // val bounds = metadata.bounds.get
+            // val key1 = bounds.minKey
+            // val key2 = bounds.maxKey
             val tile: Tile = valueReader.read(SpatialKey(x, y))
 
-            //            val product: Tile = fn(tile)
-            //            val cm: ColorMap = colorMapForRender
-            //            val png: Png = product.renderPng(cm)
-            //            val bytes = tile.toBytes()
+            val product: Tile = fn(tile)
+            val cm: ColorMap = colorMapForRender
+            val png: Png = product.renderPng(cm)
+            // val bytes = tile.toBytes()
 
             val pngBytes: Array[Byte] = tile.renderPng().bytes // 如果为空，返回空数组
             // 返回 HTTP 响应，内容类型为 image/png，内容为字节数组
-            complete(HttpEntity(ContentType(MediaTypes.`image/png`), pngBytes))
+            complete(HttpEntity(ContentType(MediaTypes.`image/png`), png.bytes))
           }
         } ~
           // Polygonal summary route:
