@@ -17,7 +17,7 @@
 </div>
 <script type="text/javascript">
     //create the tile layers
-    var ndvi = new L.tileLayer("http://192.168.163.131:9090/map/{z}/{x}/{y}", {maxNativeZoom: 21, maxZoom: 21});
+    var dawang = new L.tileLayer("http://192.168.163.131:9090/map/{z}/{x}/{y}", {maxNativeZoom: 21, maxZoom: 21});
     // var ndwi = new L.tileLayer("http://192.168.163.131:9090/map/summary/{z}", {maxNativeZoom: 10, maxZoom: 18});
     var base = new L.tileLayer("http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png");
     //link leaflet map with html
@@ -25,13 +25,13 @@
     map.setView([27.596977972222223, 91.97385008333333], 18);
     //create an overlay object
     var overlayMaps = {
-        "DaWang": ndvi,
+        "DaWang": dawang,
         // "NDWI": ndwi
     };
     //add the layers to the map
     L.control.layers(overlayMaps, {}, {collapsed: false}).addTo(map);
     base.addTo(map);
-    overlayMaps.NDVI.addTo(map);
+    overlayMaps.DaWang.addTo(map);
     var drawControl = new L.Control.Draw({
         draw: {
             circle: true,
@@ -46,6 +46,16 @@
         var type = e.layerType,
             layer = e.layer;
         layer.bindPopup("waiting...");
+
+        // 获取绘制图形的包围盒
+        var bounds = layer.getBounds();
+
+        // 创建表示包围盒的矩形
+        var rectangle = L.rectangle(bounds, {color: "red", weight: 1, fillOpacity: 0.1});
+
+        // 将矩形转换为 GeoJSON 格式，并添加到地图上
+        var rectangleGeoJSON = rectangle.toGeoJSON();
+        L.geoJSON(rectangleGeoJSON).addTo(map);
 
         var feature = layer.toGeoJSON()
         console.log(feature)
