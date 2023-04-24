@@ -100,7 +100,7 @@ object Cuts {
      .repartition(part.toInt)
 
     //    设置投影和瓦片大小
-    val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(WebMercator, tileSize = 256)
+    val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(WebMercator, tileSize = 512)
 
     val (_, reprojected) = TileLayerRDD(tiled, rasterMetaData)
       .reproject(WebMercator, layoutScheme, Bilinear)

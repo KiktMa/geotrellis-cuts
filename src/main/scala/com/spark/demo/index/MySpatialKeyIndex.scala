@@ -49,7 +49,7 @@ object MySpatialKeyIndex {
 
     val geoRDD: RDD[(ProjectedExtent, Tile)] = sparkContext.hadoopGeoTiffRDD(hadoopInPath)
 
-    val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoRDD, FloatingLayoutScheme(256))
+    val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoRDD, FloatingLayoutScheme(512))
 
     val tiled: RDD[(SpatialKey, Tile)] = geoRDD.
       tileToLayout(rasterMetaData.cellType, rasterMetaData.layout, Bilinear)
