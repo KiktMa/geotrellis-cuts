@@ -7,14 +7,15 @@ public class CreateIndex2Txt {
     public static void main(String[] args) {
 
         double height = 0;
-        int level = 18;
+        byte level = 18;
+        byte[] geoID = new byte[32];
         try {
             // 读取本地txt文件
             File inputFile = new File("D:\\test_tif\\lonlat\\input.txt");
             BufferedReader reader = new BufferedReader(new FileReader(inputFile));
 
             // 创建新的txt文件
-            File outputFile = new File("D:\\test_tif\\lonlat\\lonlat.txt");
+            File outputFile = new File("D:\\test_tif\\lonlat\\lonlat222.txt");
             BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
 
             // 读取每一行并计算相加结果
@@ -23,10 +24,13 @@ public class CreateIndex2Txt {
                 String[] elements = line.split(" ");
                 double lat = Double.parseDouble(elements[1]);
                 double lon = Double.parseDouble(elements[2]);
-                String hexCode = GeoSot.INSTANCE.getHexCode(lat, lon, height, level);
+                GeoSot.INSTANCE.PointGridIdentify3D(lat, lon, height, level, geoID);
 
-                // 将结果写入新的txt文件
-                writer.write(hexCode + "\n");
+                for (int i = 0; i < geoID.length; i++) {
+                    writer.write(geoID[i]+" ");
+                }
+                writer.write("\n ");
+//                GeoSot.INSTANCE.freeMemory(hexCode);
             }
             // 关闭输入输出流
             reader.close();

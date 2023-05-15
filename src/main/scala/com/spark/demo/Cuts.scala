@@ -34,25 +34,25 @@ import org.apache.spark.sql.functions.udf
 import java.io.File
 
 object Cuts {
-  //  输入文件路径
+  // 输入文件路径
   private val hadoopInPath: String = "hdfs://node1:9000/tiff/road_slop_8bit.tif"
-  //  输出文件路径
+  // 输出文件路径
   private val outFilePath: String = "/app/tif"
 
-  //  spark Master
+  // spark Master
   private val master: String = "yarn"
-  //  spark 应用名称
+  // spark 应用名称
   private val appName: String = "GeoTrellis2Accumulo"
 
-  //  切片等级
+  // 切片等级
   private val setZoom: Int = 18
   private val tileSize: Int = 512
 
-  //  是否生成PNG
+  // 是否生成PNG
   private val isPNG: Boolean = false
-  //  实例名称
+  // 实例名称
   private val instanceFileName: String = "caijian"
-  //  图片实例名称
+  // 图片实例名称
   private val InstancePNGFileName: String = "test"
 
   private val sparkConf: SparkConf = new SparkConf()
@@ -72,72 +72,73 @@ object Cuts {
    */
   def main(args: Array[String]): Unit = {
     try {
-      run(sparkContext,args(0),args(1),args(2),args(3),args(4))
+      run(sparkContext,args(0),args(1),args(2),args(3),args(4),args(5).toInt)
     } finally {
       sparkContext.stop()
     }
   }
 
-  def run(implicit sparkContext: SparkContext
-          ,tableName:String,path:String,part:String,startZoom:String,endZoom:String): Unit = {
+  def run(implicit sparkContext: SparkContext,tableName:String,
+          path:String,part:String,startZoom:String,endZoom:String,tileSize:Int): Unit = {
 
     val instanceName = "accumulo"
     val zookeepers = "node1:2181,node2:2181,node3:2181"
     val user = "root"
     val password = "root"
-    //    构建GeoRDD
-    //    ProjectedExtent类型值必须赋予，否则创建元数据信息的时候会报找不到
+    // 构建GeoRDD
+    // ProjectedExtent类型值必须赋予，否则创建元数据信息的时候会报找不到
     val geoRDD: RDD[(ProjectedExtent, Tile)] = sparkContext.hadoopGeoTiffRDD(path)
 
-    //    创建元数据信息
-    val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoRDD, FloatingLayoutScheme(512))
+    // 创建元数据信息
+    val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoRDD, FloatingLayoutScheme(tileSize))
 
-    //    创建切片RDD
-    val tiled: RDD[(SpatialKey, Tile)] = geoRDD.
-      tileToLayout(rasterMetaData.cellType, rasterMetaData.layout, Bilinear)
-    // 请特别注意，此处咨询过 GeoTrellis 的作者，请不要随意的使用repartition!!
+//    val tileCols = rasterMetaData.tileLayout.layoutCols
+//    val tileRows = rasterMetaData.tileLayout.layoutRows
+//    val tileWidth = rasterMetaData.tileLayout.tileCols
+//    val tileHeight = rasterMetaData.tileLayout.tileRows
+//    val layoutDefinition = LayoutDefinition(rasterMetaData.extent,
+//      TileLayout(tileCols, tileRows, tileWidth, tileHeight))
+
+    // 创建切片RDD
+    val tiled: RDD[(SpatialKey, Tile)] = geoRDD
+      .tileToLayout(rasterMetaData.cellType, rasterMetaData.layout)
+    // 请特别注意，不要随意的使用repartition!
     // repartition 会将所有的数据进行重新分区，增加计算量！
      .repartition(part.toInt)
 
-    //    设置投影和瓦片大小
-    val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(WebMercator, tileSize = 512)
-
+    // 设置投影和瓦片大小
+    val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(WebMercator, tileSize)
+//    val layoutScheme: FloatingLayoutScheme = FloatingLayoutScheme(tileSize)
+//    val gridExtent = new GridExtent(Extent(1.0214554023750909E7, 3179116.727955985, 1.0246290023750909E7, 3180229.227955985), CellSize(0.5,0.5))
+//    val layoutDefinition = LayoutDefinition(gridExtent, tileSize = 512)
     val (_, reprojected) = TileLayerRDD(tiled, rasterMetaData)
-      .reproject(WebMercator, layoutScheme, Bilinear)
+      .reproject(WebMercator, layoutScheme)
 
-    //    创建输出存储区
-    //    val attributeStore = FileAttributeStore(outFilePath)
-    //    val writer = FileLayerWriter(attributeStore)
-
-    //    val colorRender = ColorRamps.LightToDarkSunset
+    // 创建输出存储区
+    // val attributeStore = FileAttributeStore(outFilePath)
+    // val writer = FileLayerWriter(attributeStore)
+    // val colorRender = ColorRamps.LightToDarkSunset
+    // 将金字塔模型存储在accumulo数据库中
     val instance = AccumuloInstance(instanceName, zookeepers, user, new PasswordToken(password))
     val attributeStore = AccumuloAttributeStore(instance)
-    val store = AccumuloLayerWriter(instance, attributeStore,tableName)
+    val writer = AccumuloLayerWriter(instance, attributeStore,tableName)
 
-
-//    def getTileCode(zoom: Int, lat: Double, lon: Double): String = {
-//      val code = GeoSot.INSTANCE.getHexCode(lat, lon, 0, zoom)
-//      s"${code}"
-//    }
+    // 将金字塔模型存储在hdfs分布式文件系统中
+//    val catalogPathHdfs = new Path("hdfs://node1:9000/tiff/tile")
+//    val attributeStore = HadoopAttributeStore(catalogPathHdfs)      // 创建HDFS写入对象
+//    val writer = HadoopLayerWriter(catalogPathHdfs, attributeStore)
 
     Pyramid.upLevels(reprojected, layoutScheme, startZoom.toInt, endZoom.toInt, Bilinear) { (rdd, z) =>
       val layerId = LayerId("layer_"+tableName, z)
       if(attributeStore.layerExists(layerId)){
         AccumuloLayerDeleter(attributeStore).delete(layerId)
       }
-//      val tilesWithMetadata = rdd.map { case (key, tile) =>
-//        val tileCode = getTileCode(z, rasterMetaData.extent.center.y, rasterMetaData.extent.center.x)
-//        val metaData = TileLayerMetadata(
-//          cellType = tile.cellType,
-//          layout = rasterMetaData.layout,
-//          extent = rasterMetaData.mapTransform(key),
-//          crs = rasterMetaData.crs,
-//          bounds = KeyBounds(key, key)
-//        )
-//        (key, tile, metaData)
+      // 判断hdfs中是否已经存在该金字塔模型
+//      if (attributeStore.layerExists(layerId)) {
+//        HadoopLayerDeleter(attributeStore).delete(layerId)
 //      }
       // 这里我们选择的是索引方式，希尔伯特和Z曲线两种方式选择
-      store.write(layerId, rdd, ZCurveKeyIndexMethod)
+      writer.write(layerId, rdd, ZCurveKeyIndexMethod)
     }
     sparkContext.stop()
   }

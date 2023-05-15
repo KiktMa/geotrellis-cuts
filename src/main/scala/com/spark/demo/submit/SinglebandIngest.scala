@@ -1,14 +1,16 @@
 package com.spark.demo.submit
 
+import geotrellis.proj4.WebMercator
 import geotrellis.raster.resample.Bilinear
 import geotrellis.raster.{ByteConstantNoDataCellType, Tile}
 import geotrellis.spark.io.{SpatialKeyFormat, tileLayerMetadataFormat}
 import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloInstance, AccumuloLayerDeleter, AccumuloLayerWriter}
-import geotrellis.spark.{ContextRDD, LayerId, Metadata, SpatialKey, TileLayerMetadata, withTilerMethods}
-import geotrellis.spark.io.hadoop.HadoopGeoTiffRDD
+import geotrellis.spark.{ContextRDD, LayerId, Metadata, SpatialKey, TileLayerMetadata, TileLayerRDD, withTilerMethods}
+import geotrellis.spark.io.hadoop.{HadoopGeoTiffRDD, HadoopSparkContextMethodsWrapper}
 import geotrellis.spark.io.index.ZCurveKeyIndexMethod
 import geotrellis.spark.io.kryo.KryoRegistrator
 import geotrellis.spark.tiling.FloatingLayoutScheme
+import geotrellis.vector.ProjectedExtent
 import org.apache.accumulo.core.client.security.tokens.PasswordToken
 import org.apache.hadoop.fs.Path
 import org.apache.spark.rdd.RDD
@@ -36,14 +38,21 @@ object SinglebandIngest {
     implicit val sparkContext: SparkContext = new SparkContext(sparkConf)
 
     val path = new Path(args(0))
-    val geoTiff = HadoopGeoTiffRDD.spatial(path)
+    val geoRDD: RDD[(ProjectedExtent, Tile)] = HadoopGeoTiffRDD.spatial(path)
+//    val geoRDD: RDD[(ProjectedExtent, Tile)] = sparkContext.hadoopGeoTiffRDD(path)
+    val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoRDD, FloatingLayoutScheme(512))
 
-    val (_, rasterMetaData) = TileLayerMetadata.fromRDD(geoTiff, FloatingLayoutScheme(512))
+//    val CoverLayer: RDD[(SpatialKey, Tile)] with Metadata[TileLayerMetadata[SpatialKey]] = ContextRDD(
+//      geoRDD.tileToLayout(rasterMetaData, Bilinear)
+//        .mapValues { tile => tile.convert(ByteConstantNoDataCellType) },
+//      rasterMetaData.copy(cellType = ByteConstantNoDataCellType))
+    val tiled = geoRDD
+      .tileToLayout(rasterMetaData.cellType, rasterMetaData.layout)
+      .repartition(args(2).toInt)
 
-    val CoverLayer: RDD[(SpatialKey, Tile)] with Metadata[TileLayerMetadata[SpatialKey]] = ContextRDD(
-      geoTiff.tileToLayout(rasterMetaData, Bilinear)
-        .mapValues { tile => tile.convert(ByteConstantNoDataCellType) },
-      rasterMetaData.copy(cellType = ByteConstantNoDataCellType))
+    val layoutScheme: FloatingLayoutScheme = FloatingLayoutScheme(512)
+    val (_, reprojected) = TileLayerRDD(tiled, rasterMetaData)
+      .reproject(WebMercator, layoutScheme)
 
     val layerId = LayerId("layer_"+args(1), 18)
 
@@ -56,6 +65,6 @@ object SinglebandIngest {
     if (attributeStore.layerExists(layerId)) {
       AccumuloLayerDeleter(attributeStore).delete(layerId)
     }
-    writer.write(layerId,CoverLayer,ZCurveKeyIndexMethod)
+    writer.write(layerId,reprojected,ZCurveKeyIndexMethod)
   }
 }

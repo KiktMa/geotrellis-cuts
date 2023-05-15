@@ -1,11 +1,25 @@
 package com.geosot.javademo.geosot;
 
+import com.esotericsoftware.kryo.io.Input;
+import geotrellis.raster.Tile;
+import geotrellis.spark.io.accumulo.AccumuloAttributeStore;
+import geotrellis.spark.io.accumulo.AccumuloLayerReader;
+import geotrellis.spark.io.accumulo.AccumuloValueReader;
+import geotrellis.vector.Extent;
 import org.apache.accumulo.core.client.*;
+import org.apache.accumulo.core.client.security.tokens.PasswordToken;
 import org.apache.accumulo.core.data.Key;
 import org.apache.accumulo.core.data.Range;
 import org.apache.accumulo.core.data.Value;
 import org.apache.accumulo.core.security.Authorizations;
 import org.apache.hadoop.io.Text;
+import org.apache.spark.SparkConf;
+import org.apache.spark.serializer.KryoSerializer;
+import com.esotericsoftware.kryo.Kryo;
+import java.io.ByteArrayInputStream;
+
+import org.apache.spark.util.ByteBufferInputStream;
+import org.apache.spark.util.io.ChunkedByteBufferInputStream;
 
 import javax.imageio.stream.FileImageOutputStream;
 import java.io.File;
@@ -15,10 +29,14 @@ import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 import java.util.Map;
 
+import static org.apache.xmpbox.type.Cardinality.Seq;
+
 public class ScanTiff {
     public static void main(String[] args) throws AccumuloException, AccumuloSecurityException, TableNotFoundException {
         String instanceName = "accumulo";
         String zooServers = "node1:2181,node2:2181,node3:2181";
+        KryoSerializer kryoSerializer = new KryoSerializer(new SparkConf(true));
+        Kryo kryo = new Kryo();
         Instance inst = new ZooKeeperInstance(instanceName, zooServers);
         Connector conn = inst.getConnector("root", "root");
 
@@ -34,7 +52,9 @@ public class ScanTiff {
             String columnFamily = String.valueOf(entry.getKey().getColumnFamily());
             Value value = entry.getValue();
             byte[] bytes = value.get();
+            Tile tile = (Tile) kryo.readClassAndObject(new Input(bytes));
             long timestamp = entry.getKey().getTimestamp();
+//            entry.getKey().set(new Key("id"));
             LocalDateTime localDateTime1 = Instant.ofEpochSecond(timestamp).atOffset(ZoneOffset.UTC).toLocalDateTime();
             OffsetDateTime dateTime1 = OffsetDateTime.of(localDateTime1, ZoneOffset.UTC);
             System.out.println(dateTime1);

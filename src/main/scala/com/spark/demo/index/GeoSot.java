@@ -4,8 +4,8 @@ import com.sun.jna.Library;
 import com.sun.jna.Native;
 
 public interface GeoSot extends Library {
-    GeoSot INSTANCE = (GeoSot)Native.load("GeoSOTForJava", GeoSot.class);
-    String getHexCode(double var1, double var3, double var5, int var7);
-    void freeMemory(String var1);
+    GeoSot INSTANCE = Native.load("D:/JavaConsist/Project/geotrellis-cuts/src/main/resources/win32-x86-64/libGeoSOT3D", GeoSot.class);
+    int PointGridIdentify3D(double lat, double lon, double height, byte level, byte[] geoID);
+    void freeMemory(String code);
 }
 
