@@ -26,13 +26,13 @@ public class CreateIndex2Txt {
                 double lat = Double.parseDouble(elements[1]);
                 double lon = Double.parseDouble(elements[2]);
                 GeoSot.INSTANCE.PointGridIdentify3D(lat, lon, height, level, geoID);
-                Pointer changeCode = GeoSot.INSTANCE.createChangeCode(geoID, 18);
-                String code = GeoSot.INSTANCE.getHexOneDimensionalCode(changeCode);
+//                Pointer changeCode = GeoSot.INSTANCE.createChangeCode(geoID, 18);
+//                String code = GeoSot.INSTANCE.getHexOneDimensionalCode(changeCode);
 
 //                for (byte b : geoID) {
-                writer.write(code + "\n");
+//                writer.write(code + "\n");
 //                }
-                GeoSot.INSTANCE.destroyChangeCode(changeCode);
+//                GeoSot.INSTANCE.destroyChangeCode(changeCode);
 //                writer.write("\n ");
 //                GeoSot.INSTANCE.freeMemory(hexCode);
             }
