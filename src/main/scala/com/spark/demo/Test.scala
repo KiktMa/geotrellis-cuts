@@ -1,13 +1,12 @@
 package com.spark.demo
 
-import com.spark.demo.read.WebServer.sparkContext
 import geotrellis.proj4.{CRS, LatLng}
 import geotrellis.raster.io.geotiff.writer.GeoTiffWriter
 import geotrellis.raster.io.geotiff.{GeoTiff, SinglebandGeoTiff}
 import geotrellis.raster.{ArrayTile, DoubleConstantNoDataCellType, Raster, Tile}
 import geotrellis.spark.io.AttributeStore.Fields
 import geotrellis.spark.io.{Intersects, LayerQuery, Reader, SpatialKeyFormat, tileLayerMetadataFormat}
-import geotrellis.spark.{LayerId, SpatialKey, TileLayerMetadata}
+import geotrellis.spark.{Bounds, LayerId, SpatialKey, TileLayerMetadata}
 import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloCollectionLayerReader, AccumuloInstance, AccumuloLayerReader, AccumuloValueReader}
 import geotrellis.spark.io.index.zcurve.Z2
 import geotrellis.spark.tiling.LayoutDefinition
@@ -28,12 +27,12 @@ object Test {
 
   implicit val attrStore = AccumuloAttributeStore(instance.connector)
   val collectionLayerReader = AccumuloCollectionLayerReader(attrStore)
-  implicit val layerReader: AccumuloLayerReader = AccumuloLayerReader(instance)
+  implicit val layerReader: AccumuloLayerReader = AccumuloLayerReader(attrStore)
   def main(args: Array[String]): Unit = {
-//    val layerId = LayerId("layer_" + args(0), args(1).toInt)
-//    test(layerId,args(2).toDouble,args(3).toDouble,args(4).toDouble,args(5).toDouble)
-//    sparkContext.stop()
-  readSpatialKey("caijian", 18)
+    val layerId = LayerId("layer_" + args(0), args(1).toInt)
+    test(layerId,args(2).toDouble,args(3).toDouble,args(4).toDouble,args(5).toDouble,args(6))
+    sparkContext.stop()
+//  readSpatialKey("test1", 18)
   // Z曲线编码将二维空间键
 //  val z: Z2 = Z2(197888,110139)
 //  val byte = z.bitsToString
@@ -49,13 +48,13 @@ object Test {
 //      .mapTransform(Point(91.75386428833008,27.804499561428514))
 //    val (col, row) = attrStore.readMetadata[TileLayerMetadata[SpatialKey]](layerId)
 //      .toRasterExtent().mapToGrid(Point(91.75386428833008,27.804499561428514))
-//    val tile: Tile = layerReader.reader[SpatialKey, Tile](layerId).read(key)
+//    val tile: Tile = layerReader.reader[SpatialKey, Tile, Bounds[SpatialKey]](layerId).read(key)
 //    val tileCol = col - key.col * tile.cols
 //    val tileRow = row - key.row * tile.rows
 //    println(s"tileCol=${tileCol}   tileRow = ${tileRow}")
 //    tile.get(tileCol, tileRow)
     // 求瓦片坡度
-//    tile.slope(getMetaData(LayerId(LayerName, zoom)).layout.cellSize, 1.0, None)
+//    tile.slope(getMetaData(LayerId("LayerName", 0)).layout.cellSize, 1.0, None)
 //
     val maskz: String = "{\n" +
       "      \"type\": \"FeatureCollection\"\n" +
@@ -102,11 +101,11 @@ object Test {
     val features = geoJson.asInstanceOf[JsonFeatureCollection].getAllPolygons()
     val poly = features.headOption.getOrElse(throw new Exception("No polygon found"))
 
-    val polygon = WKT.read("POLYGON ((0 0, 0 10, 10 10, 10 0, 0 0))").asInstanceOf[Polygon]
+//    val polygon = WKT.read("POLYGON ((0 0, 0 10, 10 10, 10 0, 0 0))").asInstanceOf[Polygon]
 //    val query = new LayerQuery[SpatialKey, TileLayerMetadata[SpatialKey]]().where(Intersects(polygon))
 
     val layerMetadata = attrStore.readMetadata[TileLayerMetadata[SpatialKey]](layerId)
-    val queryPoly = polygon.reproject(LatLng, layerMetadata.crs)
+    val queryPoly = poly.reproject(LatLng, layerMetadata.crs)
 
     val fn: Tile => Tile = {
       tile: Tile => tile.convert(DoubleConstantNoDataCellType)
@@ -127,32 +126,36 @@ object Test {
 //    println(metadata.toString + "\n" + result.swap)
   }
 
-  def test(layerId: LayerId,xmin:Double,ymin:Double,xmax:Double,ymax:Double): Unit = {
+  def test(layerId: LayerId,xmin:Double,ymin:Double,xmax:Double,ymax:Double,fileName:String): Unit = {
 //    val valueReader: Reader[SpatialKey, Tile] = AccumuloValueReader(instance, attrStore, layerId)
 //    val metadata = attrStore.readMetadata(layerId)
 //    val tile:Tile = valueReader.read(metadata)
 //    val rep = tile.reproject(new Extent(0.0, 0, 0, 0), CRS.fromEpsgCode(3857), CRS.fromEpsgCode(3857)).tile
-    //    val maskedTile = {
+//        val maskedTile = {
 //      val poly = maskz.parseGeoJson[Polygon]
 //      val extent: Extent = attrStore.read[TileLayerMetadata[SpatialKey]](LayerId("LayerName", 18), Fields.metadata).mapTransform(SpatialKey(0,0))
 //      tile.mask(extent, poly.geom)
 //    }
-//    val tileLayerRDD = layerReader.read[SpatialKey, Tile, TileLayerMetadata[SpatialKey]](layerId)
-    //    tileLayerRDD.saveAsTextFile("")
-//    val tileLayer: Raster[Tile] = tileLayerRDD.crop(Extent(xmin, ymin, xmax, ymax)).stitch()
+    val tileLayerRDD = layerReader.read[SpatialKey, Tile, TileLayerMetadata[SpatialKey]](layerId)
+//        tileLayerRDD.saveAsTextFile("")
+//    val tile:Raster[Tile] = tileLayerRDD
+//      .mask(Polygon(Seq(Point(xmin, ymin), Point(xmax, ymin),Point(xmax,ymax),Point(xmin,ymax),Point(xmin, ymin))))
+//      .crop(Extent(xmin, ymin, xmax, ymax))
+//      .stitch()
+    val tileLayer: Raster[Tile] = tileLayerRDD.stitch()
 
-    //    val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(LatLng, tileSize = 512)
-    //    val topLeft = Pyramid.levelStream(tileLayerRDD, layoutScheme, 18, 18).map(md => {
-    //      val layout = md._2.metadata.layout
-    //      val extent = md._2.metadata.extent
-    //      val rows = layout.tileRows
-    //      val cols = layout.tileCols
-    //      val tileLayout = layout.tileLayout
-    //      val bounds = md._2.metadata.bounds
-    //
-    //    })
-    //    topLeft.foreach(println)
-//    GeoTiff(tileLayer, tileLayerRDD.metadata.crs).write("/app/tif/test/test.tif")
+//        val layoutScheme: ZoomedLayoutScheme = ZoomedLayoutScheme(LatLng, tileSize = 512)
+//        val topLeft = Pyramid.levelStream(tileLayerRDD, layoutScheme, 18, 18).map(md => {
+//          val layout = md._2.metadata.layout
+//          val extent = md._2.metadata.extent
+//          val rows = layout.tileRows
+//          val cols = layout.tileCols
+//          val tileLayout = layout.tileLayout
+//          val bounds = md._2.metadata.bounds
+//
+//        })
+//        topLeft.foreach(println)
+    GeoTiff(tileLayer._1, Extent(xmin, ymin, xmax, ymax), tileLayerRDD.metadata.crs).write("/app/tif/test/"+ fileName +".tif")
   }
 
   def readSpatialKey(tableName: String, level: Int): Unit = {

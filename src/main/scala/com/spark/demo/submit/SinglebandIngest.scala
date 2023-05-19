@@ -7,7 +7,7 @@ import geotrellis.spark.io.{SpatialKeyFormat, tileLayerMetadataFormat}
 import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloInstance, AccumuloLayerDeleter, AccumuloLayerWriter}
 import geotrellis.spark.{ContextRDD, LayerId, Metadata, SpatialKey, TileLayerMetadata, TileLayerRDD, withTilerMethods}
 import geotrellis.spark.io.hadoop.{HadoopGeoTiffRDD, HadoopSparkContextMethodsWrapper}
-import geotrellis.spark.io.index.ZCurveKeyIndexMethod
+import geotrellis.spark.io.index.{RowMajorKeyIndexMethod, ZCurveKeyIndexMethod}
 import geotrellis.spark.io.kryo.KryoRegistrator
 import geotrellis.spark.tiling.FloatingLayoutScheme
 import geotrellis.vector.ProjectedExtent
@@ -55,16 +55,20 @@ object SinglebandIngest {
       .reproject(WebMercator, layoutScheme)
 
     val layerId = LayerId("layer_"+args(1), 18)
+    val instanceS = AccumuloInstance(
+      instance, zookeepers, user, new PasswordToken(passwordToken))
+    val writer = AccumuloLayerWriter(instanceS, args(1))
 
-    val writer = AccumuloLayerWriter(AccumuloInstance(
-      instance, zookeepers, user, new PasswordToken(passwordToken)), args(1))
-
-    val attributeStore = AccumuloAttributeStore(AccumuloInstance(
-      instance, zookeepers, user, new PasswordToken(passwordToken)))
+    val attributeStore = AccumuloAttributeStore(instanceS)
 
     if (attributeStore.layerExists(layerId)) {
       AccumuloLayerDeleter(attributeStore).delete(layerId)
     }
-    writer.write(layerId,reprojected,ZCurveKeyIndexMethod)
+    val number = args(3).toInt
+    if (number == 1){
+      writer.write(layerId,reprojected,RowMajorKeyIndexMethod)
+    } else {
+      writer.write(layerId,reprojected,ZCurveKeyIndexMethod)
+    }
   }
 }

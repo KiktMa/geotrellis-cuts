@@ -1,6 +1,7 @@
 package com.geosot.javademo;
 
 import com.spark.demo.index.GeoSot;
+import com.sun.jna.Pointer;
 
 import java.io.*;
 public class CreateIndex2Txt {
@@ -8,7 +9,7 @@ public class CreateIndex2Txt {
 
         double height = 0;
         byte level = 18;
-        byte[] geoID = new byte[32];
+        byte[] geoID = new byte[4];
         try {
             // 读取本地txt文件
             File inputFile = new File("D:\\test_tif\\lonlat\\input.txt");
@@ -25,11 +26,14 @@ public class CreateIndex2Txt {
                 double lat = Double.parseDouble(elements[1]);
                 double lon = Double.parseDouble(elements[2]);
                 GeoSot.INSTANCE.PointGridIdentify3D(lat, lon, height, level, geoID);
+                Pointer changeCode = GeoSot.INSTANCE.createChangeCode(geoID, 18);
+                String code = GeoSot.INSTANCE.getHexOneDimensionalCode(changeCode);
 
-                for (int i = 0; i < geoID.length; i++) {
-                    writer.write(geoID[i]+" ");
-                }
-                writer.write("\n ");
+//                for (byte b : geoID) {
+                writer.write(code + "\n");
+//                }
+                GeoSot.INSTANCE.destroyChangeCode(changeCode);
+//                writer.write("\n ");
 //                GeoSot.INSTANCE.freeMemory(hexCode);
             }
             // 关闭输入输出流

@@ -3,6 +3,7 @@ package com.spark.demo
 //import com.spark.demo.geosot.GeoSot
 
 //import com.spark.demo.index.GeoSot
+import com.typesafe.config.ConfigFactory
 import com.vividsolutions.jts.geom.GeometryFactory
 import com.vividsolutions.jts.io.WKTReader
 import com.vividsolutions.jts.operation.valid.IsValidOp
@@ -16,6 +17,7 @@ import geotrellis.spark.io._
 import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloInstance, AccumuloLayerDeleter, AccumuloLayerReader, AccumuloLayerWriter}
 import geotrellis.spark.io.file._
 import geotrellis.spark.io.hadoop._
+import geotrellis.spark.io.hbase.{HBaseAttributeStore, HBaseCollectionLayerReader, HBaseInstance, HBaseValueReader}
 import geotrellis.spark.io.index._
 import geotrellis.spark.io.kryo.KryoRegistrator
 import org.apache.spark.serializer.KryoSerializer
@@ -26,6 +28,7 @@ import monocle.PLens
 import org.apache.accumulo.core.client.{ClientConfiguration, ZooKeeperInstance}
 import org.apache.accumulo.core.client.security.tokens.PasswordToken
 import org.apache.commons.httpclient.URI
+import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.Path
 import org.apache.spark._
 import org.apache.spark.rdd.RDD
@@ -118,6 +121,19 @@ object Cuts {
     // val attributeStore = FileAttributeStore(outFilePath)
     // val writer = FileLayerWriter(attributeStore)
     // val colorRender = ColorRamps.LightToDarkSunset
+
+    // 将金字塔模型存储到hbase数据库中
+    val (hwriter, hattributeStore, hinstance) = {
+      val seq = Seq("node1","node2","node3")
+      val host = "2181"
+      val port = "2181"
+      val instance: HBaseInstance = HBaseInstance(seq, host, port)
+//      val tabnename = config.getString("hbase.tablename")
+      //instance.withTableConnectionDo(tabnename)
+      (HBaseCollectionLayerReader(instance), HBaseValueReader(instance),
+        HBaseAttributeStore(instance))
+    }
+
     // 将金字塔模型存储在accumulo数据库中
     val instance = AccumuloInstance(instanceName, zookeepers, user, new PasswordToken(password))
     val attributeStore = AccumuloAttributeStore(instance)
