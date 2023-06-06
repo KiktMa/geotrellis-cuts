@@ -17,7 +17,7 @@ import geotrellis.spark.io._
 import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloInstance, AccumuloLayerDeleter, AccumuloLayerReader, AccumuloLayerWriter}
 import geotrellis.spark.io.file._
 import geotrellis.spark.io.hadoop._
-import geotrellis.spark.io.hbase.{HBaseAttributeStore, HBaseCollectionLayerReader, HBaseInstance, HBaseValueReader}
+import geotrellis.spark.io.hbase.{HBaseAttributeStore, HBaseCollectionLayerReader, HBaseInstance, HBaseLayerDeleter, HBaseLayerWriter, HBaseValueReader}
 import geotrellis.spark.io.index._
 import geotrellis.spark.io.kryo.KryoRegistrator
 import org.apache.spark.serializer.KryoSerializer
@@ -28,7 +28,6 @@ import monocle.PLens
 import org.apache.accumulo.core.client.{ClientConfiguration, ZooKeeperInstance}
 import org.apache.accumulo.core.client.security.tokens.PasswordToken
 import org.apache.commons.httpclient.URI
-import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.Path
 import org.apache.spark._
 import org.apache.spark.rdd.RDD
@@ -123,21 +122,14 @@ object Cuts {
     // val colorRender = ColorRamps.LightToDarkSunset
 
     // 将金字塔模型存储到hbase数据库中
-    val (hwriter, hattributeStore, hinstance) = {
-      val seq = Seq("node1","node2","node3")
-      val host = "2181"
-      val port = "2181"
-      val instance: HBaseInstance = HBaseInstance(seq, host, port)
-//      val tabnename = config.getString("hbase.tablename")
-      //instance.withTableConnectionDo(tabnename)
-      (HBaseCollectionLayerReader(instance), HBaseValueReader(instance),
-        HBaseAttributeStore(instance))
-    }
+    val hinstance = HBaseInstance(Seq("node1","node2","node3"),"")
+    val hBaseAttributeStore = HBaseAttributeStore(hinstance)
+    val hwriter = HBaseLayerWriter(hinstance, tableName)
 
     // 将金字塔模型存储在accumulo数据库中
-    val instance = AccumuloInstance(instanceName, zookeepers, user, new PasswordToken(password))
-    val attributeStore = AccumuloAttributeStore(instance)
-    val writer = AccumuloLayerWriter(instance, attributeStore,tableName)
+//    val instance = AccumuloInstance(instanceName, zookeepers, user, new PasswordToken(password))
+//    val attributeStore = AccumuloAttributeStore(instance)
+//    val writer = AccumuloLayerWriter(instance, attributeStore,tableName)
 
     // 将金字塔模型存储在hdfs分布式文件系统中
 //    val catalogPathHdfs = new Path("hdfs://node1:9000/tiff/tile")
@@ -146,15 +138,19 @@ object Cuts {
 
     Pyramid.upLevels(reprojected, layoutScheme, startZoom.toInt, endZoom.toInt, Bilinear) { (rdd, z) =>
       val layerId = LayerId("layer_"+tableName, z)
-      if(attributeStore.layerExists(layerId)){
-        AccumuloLayerDeleter(attributeStore).delete(layerId)
+      // 判断hbase中是否已经存在该金字塔模型
+      if(hBaseAttributeStore.layerExists(layerId)){
+        HBaseLayerDeleter(hBaseAttributeStore).delete(layerId)
       }
+//      if(attributeStore.layerExists(layerId)){
+//        AccumuloLayerDeleter(attributeStore).delete(layerId)
+//      }
       // 判断hdfs中是否已经存在该金字塔模型
 //      if (attributeStore.layerExists(layerId)) {
 //        HadoopLayerDeleter(attributeStore).delete(layerId)
 //      }
       // 这里我们选择的是索引方式，希尔伯特和Z曲线两种方式选择
-      writer.write(layerId, rdd, ZCurveKeyIndexMethod)
+      hwriter.write(layerId, rdd, ZCurveKeyIndexMethod)
     }
     sparkContext.stop()
   }

@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/CreateIndex2Txt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/CreateIndex2Txt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/Cuts.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/Cuts.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/Test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/Test.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/index/GeoSot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/index/GeoSot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/submit/SinglebandIngest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/submit/SinglebandIngest.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,24 +62,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaClassFindUsagesOptions.isMethodsUsages": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/JavaConsist/Project/geotrellis-cuts/src/main/resources/win32-x86-64",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaClassFindUsagesOptions.isMethodsUsages&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/JavaConsist/Project/geotrellis-cuts/src/main/resources/win32-x86-64&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -243,7 +238,9 @@
       <workItem from="1683160888305" duration="32879000" />
       <workItem from="1683791225858" duration="13416000" />
       <workItem from="1684113079925" duration="40280000" />
-      <workItem from="1684478183156" duration="11196000" />
+      <workItem from="1684478183156" duration="21161000" />
+      <workItem from="1685331422894" duration="5851000" />
+      <workItem from="1685525142514" duration="666000" />
     </task>
     <servers />
   </component>
