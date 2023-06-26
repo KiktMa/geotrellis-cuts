@@ -1,0 +1,76 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js" integrity="sha256-siofc4Uwjlra3YWkwthOn8Uj69cNN4aMug/iOHNiRgs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" integrity="sha256-XzD3RpaHPv7lzX9qt+2n1j5cWj48O24KsgaGYpKN8x8=" crossorigin="anonymous" />
+    <style type="text/css">
+        body, #map {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="map">
+</div>
+<script type="text/javascript">
+    //create the tile layers
+    var dawang = new L.tileLayer("http://192.168.163.131:9090/map/{z}/{x}/{y}", {maxNativeZoom: 18, maxZoom: 18});
+    // var ndwi = new L.tileLayer("http://192.168.163.131:9090/map/summary/{z}", {maxNativeZoom: 10, maxZoom: 18});
+    var base = new L.tileLayer("http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png");
+    //link leaflet map with html
+    var map = L.map('map');
+    map.setView([27.596977972222223, 91.97385008333333], 18);
+    //create an overlay object
+    var overlayMaps = {
+        "DaWang": dawang,
+        // "NDWI": ndwi
+    };
+    //add the layers to the map
+    L.control.layers(overlayMaps, {}, {collapsed: false}).addTo(map);
+    base.addTo(map);
+    overlayMaps.DaWang.addTo(map);
+    var drawControl = new L.Control.Draw({
+        draw: {
+            circle: true,
+            marker: true,
+            polyline: true,
+            circlemarker: true
+        }
+    });
+    map.addControl(drawControl);
+
+    map.on(L.Draw.Event.CREATED, function (e) {
+        var type = e.layerType,
+            layer = e.layer;
+        layer.bindPopup("waiting...");
+
+        // 获取绘制图形的包围盒
+        var bounds = layer.getBounds();
+
+        // 创建表示包围盒的矩形
+        var rectangle = L.rectangle(bounds, {color: "red", weight: 1, fillOpacity: 0.1});
+
+        // 将矩形转换为 GeoJSON 格式，并添加到地图上
+        var rectangleGeoJSON = rectangle.toGeoJSON();
+        L.geoJSON(rectangleGeoJSON).addTo(map);
+
+        var feature = layer.toGeoJSON()
+        console.log(feature)
+        var postBody = JSON.stringify(feature.geometry)
+        var zoom = map.getZoom()
+        console.log(zoom)
+        // $.post("/ndvi/"+zoom+"/summary", postBody, function (data, status) {
+        //     var msg = "Zoom: " + zoom + "<br/>" +
+        //         "NDVI min: "+ data[0] + "<br/>" +
+        //         "NDVI max: " + data[1];
+        //     layer.bindPopup(msg)
+        // });
+        map.addLayer(layer);
+    });
+
+</script>
+</body>
+</html>

@@ -10,7 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/Cuts.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/Cuts.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/connect/MetadataWrite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/connect/MetadataWrite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/pointcloud/LASBatchCutter.scala" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +68,7 @@
     &quot;JavaClassFindUsagesOptions.isMethodsUsages&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_directory_selection&quot;: &quot;D:/JavaConsist/Project/geotrellis-cuts/src/main/scala&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/JavaConsist/Project/geotrellis-cuts/src/main/resources/win32-x86-64&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -76,7 +78,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -111,7 +113,7 @@
       <command value="mvn clean scala:compile compile package" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.CreateIndex2Txt">
+  <component name="RunManager" selected="Application.WordCount">
     <configuration name="CreateIndex2Txt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.CreateIndex2Txt" />
       <module name="spark_demo" />
@@ -140,13 +142,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.spark.demo.read.Test" />
+    <configuration name="WordCount" type="Application" factoryName="Application" temporary="true">
+      <envs>
+        <env name="HADOOP_HOME" value="D:\Paper\hadoop-2.7.7" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="com.spark.demo.local.WordCount" />
       <module name="spark_demo" />
       <shortenClasspath name="MANIFEST" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.spark.demo.*" />
+          <option name="PATTERN" value="com.spark.demo.local.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -183,19 +188,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.WordCount" />
       <item itemvalue="Application.CreateIndex2Txt" />
       <item itemvalue="Application.Zilb" />
       <item itemvalue="Application.com.spark.demo.Test" />
       <item itemvalue="Application.ScanTiff" />
-      <item itemvalue="Application.Test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WordCount" />
         <item itemvalue="Application.CreateIndex2Txt" />
         <item itemvalue="Application.com.spark.demo.Test" />
         <item itemvalue="Application.ScanTiff" />
         <item itemvalue="Application.Zilb" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -241,6 +246,12 @@
       <workItem from="1684478183156" duration="21161000" />
       <workItem from="1685331422894" duration="5851000" />
       <workItem from="1685525142514" duration="666000" />
+      <workItem from="1686014940097" duration="1551000" />
+      <workItem from="1687676657365" duration="1352000" />
+      <workItem from="1687678183974" duration="5743000" />
+      <workItem from="1687742749112" duration="4050000" />
+      <workItem from="1687763686391" duration="1394000" />
+      <workItem from="1687765751055" duration="767000" />
     </task>
     <servers />
   </component>

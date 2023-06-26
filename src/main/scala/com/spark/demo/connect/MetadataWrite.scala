@@ -9,7 +9,7 @@ class MetadataWrite {
 object MetadataWrite{
   val conn_str = "jdbc:postgresql://192.168.2.12:5432/"
 
-  val conn: Connection = DriverManager.getConnection(conn_str, "用户名", "密码")
+  val conn: Connection = DriverManager.getConnection(conn_str, "postgres", "postgres")
 
   try {
     // Configure to be Read Only
