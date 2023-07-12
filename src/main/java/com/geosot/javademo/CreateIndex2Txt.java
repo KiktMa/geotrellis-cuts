@@ -1,5 +1,6 @@
 package com.geosot.javademo;
 
+import com.geosot.javademo.geosot.ChangeCode;
 import com.spark.demo.index.GeoSot;
 import com.sun.jna.Pointer;
 
@@ -26,6 +27,10 @@ public class CreateIndex2Txt {
                 double lat = Double.parseDouble(elements[1]);
                 double lon = Double.parseDouble(elements[2]);
                 GeoSot.INSTANCE.PointGridIdentify3D(lat, lon, height, level, geoID);
+
+                // 将geosot二进制编码写成16进制字符串
+                ChangeCode changeCode = new ChangeCode(geoID, 17);
+                String binaryOneDimensionalCode = changeCode.getHexOneDimensionalCode();
 //                Pointer changeCode = GeoSot.INSTANCE.createChangeCode(geoID, 18);
 //                String code = GeoSot.INSTANCE.getHexOneDimensionalCode(changeCode);
 
