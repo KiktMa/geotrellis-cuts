@@ -66,8 +66,8 @@ public class CoordinateChange {
         try {
             Coordinate sour = new Coordinate(x, y);
             //这里要选择转换的坐标系是可以随意更换的,4326即为经纬度坐标系
-            CoordinateReferenceSystem source = CRS.decode("EPSG:4326");
-            CoordinateReferenceSystem target = CRS.decode("EPSG:"+3857);
+            CoordinateReferenceSystem source = CRS.decode("EPSG:3857");
+            CoordinateReferenceSystem target = CRS.decode("EPSG:"+4326);
 
             MathTransform transform = CRS.findMathTransform(source, target, true);
             tar = new Coordinate();

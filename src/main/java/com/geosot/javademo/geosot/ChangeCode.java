@@ -44,7 +44,7 @@ public class ChangeCode {
         latCode = new BitSet(BITS_PER_D);
         lonCode = new BitSet(BITS_PER_D);
         for (int i = 0; i < MAX_BITS && p >= 0; i += 3) {
-            heightCode.set(p, tempBitSet.get(MAX_BITS - (i + 0) - 1));
+            heightCode.set(p, tempBitSet.get(MAX_BITS - i - 1));
             latCode.set(p, tempBitSet.get(MAX_BITS - (i + 1) - 1));
             lonCode.set(p, tempBitSet.get(MAX_BITS - (i + 2) - 1));
             --p;
@@ -58,7 +58,7 @@ public class ChangeCode {
         int index = 0;
         binaryOneDCodeBit = new BitSet(MAX_BITS);
         for (int posIndex = BITS_PER_D - 1; posIndex >= 0; --posIndex) {
-            binaryOneDCodeBit.set(MAX_BITS - 1 - (index + 0), heightCode.get(posIndex));
+            binaryOneDCodeBit.set(MAX_BITS - 1 - index, heightCode.get(posIndex));
             binaryOneDCodeBit.set(MAX_BITS - 1 - (index + 1), latCode.get(posIndex));
             binaryOneDCodeBit.set(MAX_BITS - 1 - (index + 2), lonCode.get(posIndex));
             index += 3;

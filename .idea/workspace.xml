@@ -10,11 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/geosot/ChangeCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/local/CutPointClouds.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/CreateIndex2Txt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/CreateIndex2Txt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/geosot/ChangeCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/geosot/ChangeCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/geosot/CoordinateChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/geosot/CoordinateChange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/local/CutPointClouds.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/local/SparkFileProcessing.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/spark/demo/test/Count.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spark/demo/test/Count.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +116,7 @@
       <command value="mvn clean scala:compile compile package" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Count">
+  <component name="RunManager" selected="Application.SparkFileProcessing">
     <configuration name="CoordinateChange" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.geosot.CoordinateChange" />
       <module name="spark_demo" />
@@ -175,11 +173,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordCount" type="Application" factoryName="Application" temporary="true">
-      <envs>
-        <env name="HADOOP_HOME" value="D:\Paper\hadoop-2.7.7" />
-      </envs>
-      <option name="MAIN_CLASS_NAME" value="com.spark.demo.local.WordCount" />
+    <configuration name="SparkFileProcessing" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.spark.demo.local.SparkFileProcessing" />
       <module name="spark_demo" />
       <shortenClasspath name="MANIFEST" />
       <extension name="coverage">
@@ -193,19 +188,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.SparkFileProcessing" />
       <item itemvalue="Application.Count" />
       <item itemvalue="Application.CutPointClouds" />
       <item itemvalue="Application.CoordinateChange" />
       <item itemvalue="Application.LASBatchCutter" />
-      <item itemvalue="Application.WordCount" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SparkFileProcessing" />
         <item itemvalue="Application.Count" />
         <item itemvalue="Application.CutPointClouds" />
         <item itemvalue="Application.CoordinateChange" />
         <item itemvalue="Application.LASBatchCutter" />
-        <item itemvalue="Application.WordCount" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +253,7 @@
       <workItem from="1687763686391" duration="1394000" />
       <workItem from="1687765751055" duration="3496000" />
       <workItem from="1688630724341" duration="12614000" />
-      <workItem from="1688799947396" duration="26909000" />
+      <workItem from="1688799947396" duration="38517000" />
     </task>
     <servers />
   </component>
