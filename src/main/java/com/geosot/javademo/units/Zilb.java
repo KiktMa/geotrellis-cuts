@@ -1,4 +1,4 @@
-package com.geosot.javademo;
+package com.geosot.javademo.units;
 
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;

@@ -1,4 +1,4 @@
-package com.geosot.javademo;
+package com.geosot.javademo.units;
 
 import javax.imageio.stream.FileImageOutputStream;
 import java.io.File;

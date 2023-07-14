@@ -25,26 +25,26 @@ object SparkFileProcessing {
 
     import spark.implicits._
 
-    // 对每行数据进行转换和计算
+    // 对每行的点数据都添加另外三列信息：经度纬度以及geosot编码
     val result = data.map(line => {
       val values = line.split(" ").map(_.toDouble)
       val x = values(0)
       val y = values(1)
       val z = values(2)
-      val field1 = values(3)
-      val field2 = values(4)
-      val field3 = values(5)
+//      val field1 = values(3)
+//      val field2 = values(4)
+//      val field3 = values(5)
       val lonlat = CoordinateChange.getCoordinate(x, y)
       val geoarr = new Array[Byte](32)
       GeoSot.INSTANCE.PointGridIdentify3D(lonlat(0), lonlat(1), z, 32: Byte, geoarr)
       val code: ChangeCode = new ChangeCode(geoarr, 32)
       val geocode: String = code.getHexOneDimensionalCode
-      (x, y, z, field1, field2, field3, lonlat(0), lonlat(1), geocode)
+      (x, y, z, lonlat(0), lonlat(1), geocode)
     })
 
     // 将结果写回到原始文件
-    result.map { case (x, y, z, field1, field2, field3, lon, lat, geocode) =>
-      s"$x $y $z $field1 $field2 $field3 $lon $lat $geocode"
+    result.map { case (x, y, z, lon, lat, geocode) =>
+      s"$x $y $z $lon $lat $geocode"
     }.write.text(outputPath)
 
     // 关闭 SparkSession

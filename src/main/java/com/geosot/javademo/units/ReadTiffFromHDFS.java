@@ -1,4 +1,4 @@
-package com.geosot.javademo;
+package com.geosot.javademo.units;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;

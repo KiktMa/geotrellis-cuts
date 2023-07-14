@@ -1,4 +1,4 @@
-package com.geosot.javademo;
+package com.geosot.javademo.units;
 
 import com.geosot.javademo.geosot.ChangeCode;
 import com.spark.demo.index.GeoSot;

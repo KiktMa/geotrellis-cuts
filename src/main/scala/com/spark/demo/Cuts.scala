@@ -31,7 +31,6 @@ import org.apache.commons.httpclient.URI
 import org.apache.hadoop.fs.Path
 import org.apache.spark._
 import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.functions.udf
 
 import java.io.File
 

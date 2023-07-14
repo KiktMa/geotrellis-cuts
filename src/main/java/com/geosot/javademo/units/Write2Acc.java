@@ -1,4 +1,4 @@
-package com.geosot.javademo;
+package com.geosot.javademo.units;
 
 import org.apache.accumulo.core.client.*;
 import org.apache.accumulo.core.client.security.tokens.PasswordToken;
