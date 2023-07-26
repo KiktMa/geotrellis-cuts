@@ -18,8 +18,8 @@ object SparkFileProcessing {
       .getOrCreate()
 
     // 读取文本文件
-    val inputPath = "C:\\Users\\mj\\Desktop\\paper\\pointcloud\\corrected-LJYY-Cloud-1-0-9 - Cloud.txt"
-    val outputPath = "C:\\Users\\mj\\Desktop\\paper\\pointcloud\\corrected-LJYY-Cloud-1-0-9 - Cloud - tree.txt"
+    val inputPath = "D:\\JavaConsist\\MapData\\180m_pointcloud\\0\\corrected-LJYY-Cloud-1-0-0 - Clean.txt"
+    val outputPath = "D:\\JavaConsist\\MapData\\180m_pointcloud\\0\\new\\corrected-LJYY-Cloud-1-0-0 - Clean.txt"
 
     val data = spark.read.textFile(inputPath)
 
@@ -41,9 +41,9 @@ object SparkFileProcessing {
       val geocode: String = code.getHexOneDimensionalCode
       (x, y, z, lonlat(0), lonlat(1), geocode)
     })
-
+    val combinedResult = result.coalesce(1)
     // 将结果写回到原始文件
-    result.map { case (x, y, z, lon, lat, geocode) =>
+    combinedResult.map { case (x, y, z, lon, lat, geocode) =>
       s"$x $y $z $lon $lat $geocode"
     }.write.text(outputPath)
 
