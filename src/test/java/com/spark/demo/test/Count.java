@@ -50,12 +50,12 @@ public class Count {
         double maxhight = 0.0;
 //        GeoSot.INSTANCE.GetRangeFromCellCode3D("000000000000010010000011011001000000010011011001000011000000000010011010011000011010011011000001".getBytes(), (byte) 32,lon,lat,height,maxlon,maxlat,maxhight);
 //        GeoSot.INSTANCE.GetRangeFromCellCode3D("0004836404D90C009A61A6C1".getBytes(),(byte) 32,lon,lat,height,maxlon,maxlat,maxhight);
-        GeoSot.INSTANCE.getRangeFromCellCode3D("000000000000010010000011011001000000010011011001000011000000000010011010011000011010011011000001".getBytes(), (byte) 32,lon,lat,height,maxlon,maxlat,maxhight);
-        System.out.println(lon);
-        System.out.println(lat);
-        System.out.println(height);
-        System.out.println(maxlon);
-        System.out.println(maxlat);
-        System.out.println(maxhight);
+//        GeoSot.INSTANCE.getRangeFromCellCode3D("000000000000010010000011011001000000010011011001000011000000000010011010011000011010011011000001".getBytes(), (byte) 32,lon,lat,height,maxlon,maxlat,maxhight);
+//        System.out.println(lon);
+//        System.out.println(lat);
+//        System.out.println(height);
+//        System.out.println(maxlon);
+//        System.out.println(maxlat);
+//        System.out.println(maxhight);
     }
 }

@@ -10,14 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/mysql/TxtFileToDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/accumulo/AccumuloDataUploader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/accumulo/AccumuloDataUploader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/mysql/ConnectMySql.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/units/Write2Acc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/units/Zilb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/units/transform.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/spark/demo/local/SparkFileProcessing.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/spark/demo/local/SparkFileProcessing.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/accumulo/AccumuloDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/accumulo/AccumuloDataReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/mysql/ReadPointCloudFromMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/mysql/ReadPointCloudFromMysql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/spark/demo/test/Count.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spark/demo/test/Count.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +55,7 @@
     </option>
   </component>
   <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
@@ -70,26 +66,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JavaClassFindUsagesOptions.isMethodsUsages&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_directory_selection&quot;: &quot;D:/JavaConsist/Project/geotrellis-cuts/src/main/scala&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JavaConsist/Project/geotrellis-cuts/src/main/resources/win32-x86-64&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;39c38098e9941d13b91a6b8c88bff8aa&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JavaClassFindUsagesOptions.isMethodsUsages": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_directory_selection": "D:/JavaConsist/Project/geotrellis-cuts/src/main/scala",
+    "last_opened_file_path": "D:/JavaConsist/Project/geotrellis-cuts/src/main/resources/win32-x86-64",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.58965516",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "spring.configuration.checksum": "39c38098e9941d13b91a6b8c88bff8aa",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
@@ -122,7 +118,7 @@
       <command value="mvn clean scala:compile compile package" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.ReadPointCloudFromMysql">
+  <component name="RunManager" selected="Spring Boot.MySpringApplication">
     <configuration name="AccumuloDataReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.accumulo.AccumuloDataReader" />
       <module name="spark_demo" />
@@ -165,20 +161,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TxtFileProcessor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.units.TxtFileProcessor" />
-      <module name="spark_demo" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geosot.javademo.units.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TxtFileToDatabase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.mysql.TxtFileToDatabase" />
       <module name="spark_demo" />
@@ -193,20 +175,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MySpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="spark_demo" />
+      <option name="SHORTEN_COMMAND_LINE" value="MANIFEST" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.geosot.javademo.MySpringApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geosot.javademo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.AccumuloDataReader" />
       <item itemvalue="Application.ReadPointCloudFromMysql" />
       <item itemvalue="Application.TxtFileToDatabase" />
       <item itemvalue="Application.AccumuloDataUploader" />
-      <item itemvalue="Application.TxtFileProcessor" />
+      <item itemvalue="Spring Boot.MySpringApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.MySpringApplication" />
         <item itemvalue="Application.ReadPointCloudFromMysql" />
         <item itemvalue="Application.AccumuloDataReader" />
         <item itemvalue="Application.TxtFileToDatabase" />
         <item itemvalue="Application.AccumuloDataUploader" />
-        <item itemvalue="Application.TxtFileProcessor" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +260,9 @@
       <workItem from="1689508673167" duration="4959000" />
       <workItem from="1689582287958" duration="26285000" />
       <workItem from="1690161059854" duration="23131000" />
-      <workItem from="1690248279847" duration="18340000" />
+      <workItem from="1690248279847" duration="27860000" />
+      <workItem from="1690419840010" duration="200000" />
+      <workItem from="1690511787100" duration="5577000" />
     </task>
     <servers />
   </component>

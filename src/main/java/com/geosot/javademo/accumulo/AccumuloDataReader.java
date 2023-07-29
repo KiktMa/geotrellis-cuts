@@ -6,38 +6,41 @@ import org.apache.accumulo.core.data.Range;
 import org.apache.accumulo.core.data.Value;
 import org.apache.accumulo.core.security.Authorizations;
 import org.apache.hadoop.io.Text;
+import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+@Service
 public class AccumuloDataReader {
     /**
      * 根据GeoSot-3D编码对数据进行范围插叙
      * 可以根据两个坐标点来生成编码来对数据进行动态查询
-     * @param args
      */
-    public static void main(String[] args) {
-
+    public List<Map<String, String>> queryPointCloud() {
+        List<Map<String, String>> result = new ArrayList<>();
         try {
             Connector conn = AccumuloDataUploader.getConn();
             Scanner scanner = conn.createScanner("large_point_cloud", Authorizations.EMPTY);
-            long start = System.currentTimeMillis();
+//            long start = System.currentTimeMillis();
             // 48  15
-            scanner.setRange(new Range("0004836404CA6C92D2410442","0004836404D82CB012289282"));
-            int count = 0;
-//            for (Map.Entry<Key, Value> pointcloud : scanner) {
-//                Text columnx = pointcloud.getKey().getColumnQualifier();
-//                Text columnx = pointcloud.getKey().getColumnFamily(new Text("x"));
-//                Text columny = pointcloud.getKey().getColumnFamily(new Text("y"));
-//                Text columnz = pointcloud.getKey().getColumnFamily(new Text("z"));
-//                Value pointcloudValue = pointcloud.getValue();
-//                count++;
-//                System.out.println("columnx:"+columnx+/*", columnx:"+columny+", columnz:"+columnz+*/", pointcloudValue:"+pointcloudValue);
-//            }
-            System.out.println((System.currentTimeMillis()-start)+"ms");
+            scanner.setRange(new Range("0004836404CA6C929B659659","0004836404CA6C96890C9008"));
+//            int count = 0;
+            for (Map.Entry<Key, Value> pointcloud : scanner) {
+                Map<String, String> point = new HashMap<>();
+                point.put("x", pointcloud.getKey().getColumnQualifier(new Text("x")).toString());
+                point.put("y", pointcloud.getKey().getColumnFamily(new Text("y")).toString());
+                point.put("z", pointcloud.getKey().getColumnFamily(new Text("z")).toString());
+                result.add(point);
+            }
+//            System.out.println((System.currentTimeMillis()-start)+"ms");
 //            System.out.println(count);
         }catch (AccumuloException | AccumuloSecurityException | TableNotFoundException e) {
             throw new RuntimeException(e);
         }
+        return result;
     }
 }
 
