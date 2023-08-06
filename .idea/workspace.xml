@@ -9,12 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="" />
+=======
     <list default="true" id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/accumulo/AccumuloDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/accumulo/AccumuloDataReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/mysql/ReadPointCloudFromMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/mysql/ReadPointCloudFromMysql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/spark/demo/test/Count.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spark/demo/test/Count.java" afterDir="false" />
     </list>
+>>>>>>> origin/master
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,10 +82,17 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+<<<<<<< HEAD
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+=======
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.58965516",
     "settings.editor.selected.configurable": "File.Encoding",
+>>>>>>> origin/master
     "spring.configuration.checksum": "39c38098e9941d13b91a6b8c88bff8aa",
     "vue.rearranger.settings.migration": "true"
   }
@@ -118,7 +129,11 @@
       <command value="mvn clean scala:compile compile package" />
     </option>
   </component>
+<<<<<<< HEAD
+  <component name="RunManager" selected="Application.LeetCodeDayOne">
+=======
   <component name="RunManager" selected="Spring Boot.MySpringApplication">
+>>>>>>> origin/master
     <configuration name="AccumuloDataReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.accumulo.AccumuloDataReader" />
       <module name="spark_demo" />
@@ -147,6 +162,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LeetCodeDayOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.leetcode.LeetCodeDayOne" />
+      <module name="spark_demo" />
+      <shortenClasspath name="CLASSPATH_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geosot.javademo.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+<<<<<<< HEAD
     <configuration name="ReadPointCloudFromMysql" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.mysql.ReadPointCloudFromMysql" />
       <module name="spark_demo" />
@@ -161,6 +191,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+=======
+>>>>>>> origin/master
     <configuration name="TxtFileToDatabase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.mysql.TxtFileToDatabase" />
       <module name="spark_demo" />
@@ -190,15 +222,23 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.LeetCodeDayOne" />
       <item itemvalue="Application.AccumuloDataReader" />
       <item itemvalue="Application.ReadPointCloudFromMysql" />
       <item itemvalue="Application.TxtFileToDatabase" />
       <item itemvalue="Application.AccumuloDataUploader" />
+<<<<<<< HEAD
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LeetCodeDayOne" />
+=======
       <item itemvalue="Spring Boot.MySpringApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MySpringApplication" />
+>>>>>>> origin/master
         <item itemvalue="Application.ReadPointCloudFromMysql" />
         <item itemvalue="Application.AccumuloDataReader" />
         <item itemvalue="Application.TxtFileToDatabase" />
