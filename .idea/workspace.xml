@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="spark_demo:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="" />
-=======
-    <list default="true" id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/accumulo/AccumuloDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/accumulo/AccumuloDataReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/mysql/ReadPointCloudFromMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/mysql/ReadPointCloudFromMysql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/spark/demo/test/Count.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/spark/demo/test/Count.java" afterDir="false" />
+    <list default="true" id="fafd079a-c01c-42ba-96f7-7818d41f352d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/MySpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/MySpringApplication.java" afterDir="false" />
     </list>
->>>>>>> origin/master
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,25 +15,8 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Package Object" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -54,118 +25,45 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.8.4" />
+        <option name="useMavenConfig" value="true" />
         <option name="userSettingsFile" value="D:\JavaConsist\apache-maven-3.8.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
-  </component>
-  <component name="MavenRunner">
-    <option name="delegateBuildToMaven" value="true" />
-    <option name="skipTests" value="true" />
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectId" id="2N3Db2QorRqH1RQAGCiUDdntrRq" />
+  <component name="ProjectId" id="2TdXW2oIO4FaZzdGfTvvt5ck9Rz" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JavaClassFindUsagesOptions.isMethodsUsages": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_directory_selection": "D:/JavaConsist/Project/geotrellis-cuts/src/main/scala",
-    "last_opened_file_path": "D:/JavaConsist/Project/geotrellis-cuts/src/main/resources/win32-x86-64",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-<<<<<<< HEAD
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
+    "last_opened_file_path": "D:/JavaConsist/apache-maven-3.8.4/conf/settings.xml",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-=======
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.58965516",
-    "settings.editor.selected.configurable": "File.Encoding",
->>>>>>> origin/master
-    "spring.configuration.checksum": "39c38098e9941d13b91a6b8c88bff8aa",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JavaConsist\Project\geotrellis-cuts\src\main\resources\win32-x86-64" />
-      <recent name="D:\JavaConsist\Project\geotrellis-cuts\src\main\resources" />
-      <recent name="D:\JavaConsist\Project\geotrellis-cuts\src\main\java\com\geosot\javademo" />
-      <recent name="D:\JavaConsist\Project\geotrellis-cuts\src\main\scala\com\spark\demo\index" />
-      <recent name="D:\JavaConsist\Project\geotrellis-cuts\src\main\scala\com\spark\demo\read" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JavaConsist\Project\spark_demo\src\main\resources\static" />
-      <recent name="D:\JavaConsist\Project\spark_demo\src\main\resources\etljson" />
-      <recent name="D:\JavaConsist\Project\spark_demo\src\main\scala\com\spark\demo" />
-      <recent name="D:\JavaConsist\Project\spark_demo\src\main\scala" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.spark.demo" />
-      <recent name="com.spark.demo.read" />
-      <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.geosot.javademo.geosot" />
-      <recent name="com.spark.demo" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn clean scala:compile compile package" />
-    </option>
-  </component>
-<<<<<<< HEAD
   <component name="RunManager" selected="Application.LeetCodeDayOne">
-=======
-  <component name="RunManager" selected="Spring Boot.MySpringApplication">
->>>>>>> origin/master
-    <configuration name="AccumuloDataReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.accumulo.AccumuloDataReader" />
-      <module name="spark_demo" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geosot.javademo.accumulo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccumuloDataUploader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.accumulo.AccumuloDataUploader" />
-      <module name="spark_demo" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geosot.javademo.accumulo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LeetCodeDayOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.leetcode.LeetCodeDayOne" />
       <module name="spark_demo" />
-      <shortenClasspath name="CLASSPATH_FILE" />
+      <shortenClasspath name="MANIFEST" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.geosot.javademo.leetcode.*" />
@@ -176,40 +74,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-    <configuration name="ReadPointCloudFromMysql" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.mysql.ReadPointCloudFromMysql" />
-      <module name="spark_demo" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geosot.javademo.mysql.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-=======
->>>>>>> origin/master
-    <configuration name="TxtFileToDatabase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.mysql.TxtFileToDatabase" />
-      <module name="spark_demo" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geosot.javademo.mysql.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MySpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="spark_demo" />
-      <option name="SHORTEN_COMMAND_LINE" value="MANIFEST" />
+      <option name="SHORTEN_COMMAND_LINE" value="CLASSPATH_FILE" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.geosot.javademo.MySpringApplication" />
       <extension name="coverage">
         <pattern>
@@ -223,101 +90,28 @@
     </configuration>
     <list>
       <item itemvalue="Application.LeetCodeDayOne" />
-      <item itemvalue="Application.AccumuloDataReader" />
-      <item itemvalue="Application.ReadPointCloudFromMysql" />
-      <item itemvalue="Application.TxtFileToDatabase" />
-      <item itemvalue="Application.AccumuloDataUploader" />
-<<<<<<< HEAD
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.LeetCodeDayOne" />
-=======
       <item itemvalue="Spring Boot.MySpringApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LeetCodeDayOne" />
         <item itemvalue="Spring Boot.MySpringApplication" />
->>>>>>> origin/master
-        <item itemvalue="Application.ReadPointCloudFromMysql" />
-        <item itemvalue="Application.AccumuloDataReader" />
-        <item itemvalue="Application.TxtFileToDatabase" />
-        <item itemvalue="Application.AccumuloDataUploader" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="764a0094-5c6b-42c6-88d1-b1f7f67fce5d" name="Changes" comment="" />
-      <created>1678883942559</created>
+      <changelist id="fafd079a-c01c-42ba-96f7-7818d41f352d" name="Changes" comment="" />
+      <created>1691373966951</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1678883942559</updated>
-      <workItem from="1678883945287" duration="2390000" />
-      <workItem from="1678886385540" duration="121000" />
-      <workItem from="1678886526784" duration="8305000" />
-      <workItem from="1678932924339" duration="288000" />
-      <workItem from="1678933244405" duration="29000" />
-      <workItem from="1678934287026" duration="44000" />
-      <workItem from="1678935473935" duration="27000" />
-      <workItem from="1678935652809" duration="3000" />
-      <workItem from="1678935831083" duration="1597000" />
-      <workItem from="1678937450708" duration="1081000" />
-      <workItem from="1678939896494" duration="5688000" />
-      <workItem from="1678946671745" duration="6869000" />
-      <workItem from="1678954400617" duration="317000" />
-      <workItem from="1678954728432" duration="9740000" />
-      <workItem from="1679015618468" duration="44824000" />
-      <workItem from="1679286355181" duration="15692000" />
-      <workItem from="1679316508587" duration="56718000" />
-      <workItem from="1679532089157" duration="90699000" />
-      <workItem from="1680014056142" duration="56482000" />
-      <workItem from="1680193033012" duration="146197000" />
-      <workItem from="1680591857555" duration="23637000" />
-      <workItem from="1681114722228" duration="2520000" />
-      <workItem from="1681117279134" duration="3143000" />
-      <workItem from="1681127195093" duration="55037000" />
-      <workItem from="1681729518430" duration="9226000" />
-      <workItem from="1681778579800" duration="54451000" />
-      <workItem from="1682148302753" duration="83007000" />
-      <workItem from="1682644905855" duration="5594000" />
-      <workItem from="1683160888305" duration="32879000" />
-      <workItem from="1683791225858" duration="13416000" />
-      <workItem from="1684113079925" duration="40280000" />
-      <workItem from="1684478183156" duration="21161000" />
-      <workItem from="1685331422894" duration="5851000" />
-      <workItem from="1685525142514" duration="666000" />
-      <workItem from="1686014940097" duration="1551000" />
-      <workItem from="1687676657365" duration="1352000" />
-      <workItem from="1687678183974" duration="5743000" />
-      <workItem from="1687742749112" duration="4050000" />
-      <workItem from="1687763686391" duration="1394000" />
-      <workItem from="1687765751055" duration="3496000" />
-      <workItem from="1688630724341" duration="12614000" />
-      <workItem from="1688799947396" duration="66116000" />
-      <workItem from="1689317449797" duration="1754000" />
-      <workItem from="1689508673167" duration="4959000" />
-      <workItem from="1689582287958" duration="26285000" />
-      <workItem from="1690161059854" duration="23131000" />
-      <workItem from="1690248279847" duration="27860000" />
-      <workItem from="1690419840010" duration="200000" />
-      <workItem from="1690511787100" duration="5577000" />
+      <updated>1691373966951</updated>
+      <workItem from="1691373969738" duration="236000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
