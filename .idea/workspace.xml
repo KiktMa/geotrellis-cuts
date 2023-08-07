@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fafd079a-c01c-42ba-96f7-7818d41f352d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/MySpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/MySpringApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +14,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,10 +52,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/JavaConsist/apache-maven-3.8.4/conf/settings.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -59,9 +75,23 @@
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
-  <component name="RunManager" selected="Application.LeetCodeDayOne">
+  <component name="RunManager" selected="Application.LeetCodeDayTwo">
     <configuration name="LeetCodeDayOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.leetcode.LeetCodeDayOne" />
+      <module name="spark_demo" />
+      <shortenClasspath name="MANIFEST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geosot.javademo.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LeetCodeDayTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.leetcode.LeetCodeDayTwo" />
       <module name="spark_demo" />
       <shortenClasspath name="MANIFEST" />
       <extension name="coverage">
@@ -89,13 +119,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.LeetCodeDayTwo" />
       <item itemvalue="Application.LeetCodeDayOne" />
       <item itemvalue="Spring Boot.MySpringApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LeetCodeDayOne" />
+        <item itemvalue="Application.LeetCodeDayTwo" />
         <item itemvalue="Spring Boot.MySpringApplication" />
+        <item itemvalue="Application.LeetCodeDayOne" />
       </list>
     </recent_temporary>
   </component>
@@ -107,7 +139,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1691373966951</updated>
-      <workItem from="1691373969738" duration="236000" />
+      <workItem from="1691373969738" duration="8451000" />
     </task>
     <servers />
   </component>
