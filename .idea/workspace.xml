@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fafd079a-c01c-42ba-96f7-7818d41f352d" name="Changes" comment="" />
+    <list default="true" id="fafd079a-c01c-42ba-96f7-7818d41f352d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/leetcode/LeetCodeDayTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/leetcode/LeetCodeDayTwo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,7 +157,7 @@
       <option name="presentableId" value="Default" />
       <updated>1691373966951</updated>
       <workItem from="1691373969738" duration="11084000" />
-      <workItem from="1691485746947" duration="4170000" />
+      <workItem from="1691485746947" duration="6558000" />
     </task>
     <servers />
   </component>
