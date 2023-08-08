@@ -56,8 +56,8 @@ public class CoordinateChange {
 
     /**
      * 坐标转换
-     * @param x
-     * @param y
+     * @param x 坐标x
+     * @param y 坐标y
      * @return   返回转换后的坐标
      */
     public static Double[] getCoordinate(Double x,Double y) {
@@ -73,11 +73,10 @@ public class CoordinateChange {
             tar = new Coordinate();
             //转换
             JTS.transform(sour, tar, transform);
-        } catch (FactoryException | org.opengis.referencing.operation.TransformException e) {
-            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        assert tar != null;
         String[] split = (tar.toString().substring(1, tar.toString().length() - 1)).split(",");
         //经纬度精度
         DecimalFormat fm = new DecimalFormat("0.0000000");

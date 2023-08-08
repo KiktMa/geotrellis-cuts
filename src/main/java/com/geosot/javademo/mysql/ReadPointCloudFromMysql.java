@@ -5,6 +5,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+/**
+ * 根据geosot-3d编码从mysql数据库中读取点云数据实验
+ */
 public class ReadPointCloudFromMysql {
     public static void main(String[] args) {
         try {

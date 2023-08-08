@@ -4,6 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * 建立MySQL数据库连接
+ * 使用IODH单例模式
+ */
 public class MySQLConnect {
 
     private static final String host ="localhost";

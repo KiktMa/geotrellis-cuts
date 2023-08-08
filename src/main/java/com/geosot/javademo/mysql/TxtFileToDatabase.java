@@ -9,6 +9,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * 将点云数据存储到mysql数据库中
+ * 一些存储实验
+ */
 public class TxtFileToDatabase {
 
     public static void main(String[] args) {

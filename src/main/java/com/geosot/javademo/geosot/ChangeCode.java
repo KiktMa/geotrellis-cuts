@@ -20,6 +20,11 @@ public class ChangeCode {
     private final BitSet lonCode;
     private final BitSet binaryOneDCodeBit;
 
+    /**
+     * 将二进制的geosot-3d编码转换成16进制编码，人可以看懂的形式进行存储
+     * @param geoC 二进制geosot-3d编码
+     * @param lev 所在geosot的层级
+     */
     public ChangeCode(byte[] geoC, int lev) {
         geoCode = geoC;
         level = lev;

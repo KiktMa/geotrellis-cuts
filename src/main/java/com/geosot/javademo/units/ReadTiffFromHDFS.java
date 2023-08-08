@@ -12,6 +12,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+/**
+ * 从HDFS中读取下载栅格数据到本地环境中
+ */
 public class ReadTiffFromHDFS {
     public static void main(String[] args) throws IOException {
         // 创建spark连接

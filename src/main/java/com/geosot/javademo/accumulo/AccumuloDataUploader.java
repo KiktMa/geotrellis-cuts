@@ -25,12 +25,25 @@ public class AccumuloDataUploader {
         this.connector = connector;
     }
 
+    /**
+     * 创建Accumulo数据库表格
+     * @throws AccumuloException
+     * @throws AccumuloSecurityException
+     * @throws TableExistsException
+     */
     public void createTable() throws AccumuloException, AccumuloSecurityException, TableExistsException {
         if (!connector.tableOperations().exists(TABLE_NAME)) {
             connector.tableOperations().create(TABLE_NAME);
         }
     }
 
+    /**
+     * 批量读取点云数据并批量上传到accumulo数据库中
+     * @param filePath 点云文件存储路径
+     * @throws IOException
+     * @throws TableNotFoundException
+     * @throws MutationsRejectedException
+     */
     public void uploadData(String filePath) throws IOException, TableNotFoundException, MutationsRejectedException {
         BatchWriterConfig writerConfig = new BatchWriterConfig();
         BatchWriter batchWriter = connector.createBatchWriter(TABLE_NAME, writerConfig);
@@ -46,6 +59,11 @@ public class AccumuloDataUploader {
         reader.close();
     }
 
+    /**
+     * 为将点云数据存储到accumulo相应的列中
+     * @param line 将文件按照一行一行读取，因为点云文件的一行代表一个点数据
+     * @return
+     */
     private Mutation parseLineToMutation(String line) {
         String[] parts = line.split(" ");
         String rowId = parts[5];
@@ -61,12 +79,22 @@ public class AccumuloDataUploader {
         return mutation;
     }
 
+    /**
+     * 创建Accumulo连接，通过zookeeper来连接
+     * @return
+     * @throws AccumuloException
+     * @throws AccumuloSecurityException
+     */
     public static Connector getConn() throws AccumuloException, AccumuloSecurityException {
         ZooKeeperInstance zooKeeperInstance = new ZooKeeperInstance(instanceName, zooServers);
         Connector conn = zooKeeperInstance.getConnector(username, passworld);
         return conn;
     }
 
+    /**
+     * 主函数，启动加载持久化点云数据
+     * @param args
+     */
     public static void main(String[] args) {
 
         try {
