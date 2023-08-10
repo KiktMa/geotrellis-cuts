@@ -1,5 +1,8 @@
 package com.geosot.javademo.leetcode;
 
+
+import com.geosot.javademo.entity.ListNode;
+
 import java.lang.Math;
 
 public class LeetCodeDayTwo {
@@ -71,5 +74,33 @@ public class LeetCodeDayTwo {
             left++;
         }
         return res;
+    }
+
+    /**
+     * 从链表中删除元素
+     * @param head 头节点
+     * @param val 要删除的元素
+     * @return 返回处理后的链表
+     */
+    public ListNode removeElements(ListNode head, int val) {
+        while (head != null && head.val == val) {
+            head = head.next;
+        }
+        // 已经为null，提前退出
+        if (head == null) {
+            return head;
+        }
+        // 已确定当前head.val != val
+        ListNode pre = head;
+        ListNode cur = head.next;
+        while (cur != null) {
+            if (cur.val == val) {
+                pre.next = cur.next;
+            } else {
+                pre = cur;
+            }
+            cur = cur.next;
+        }
+        return head;
     }
 }

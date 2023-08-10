@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fafd079a-c01c-42ba-96f7-7818d41f352d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/leetcode/thread/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/leetcode/thread/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/leetcode/LeetCodeDayTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/leetcode/LeetCodeDayTwo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,14 +76,14 @@
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
-  <component name="RunManager" selected="Application.Quqian">
+  <component name="RunManager" selected="Application.LeetCodeDayTwo">
     <configuration name="LeetCodeDayOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.leetcode.LeetCodeDayOne" />
       <module name="spark_demo" />
       <shortenClasspath name="MANIFEST" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geosot.javademo.leetcode.*" />
+          <option name="PATTERN" value="com.geosot.javademo.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,7 +97,7 @@
       <shortenClasspath name="MANIFEST" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geosot.javademo.leetcode.*" />
+          <option name="PATTERN" value="com.geosot.javademo.entity.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,9 +156,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LeetCodeDayTwo" />
         <item itemvalue="Application.Quqian" />
         <item itemvalue="Application.Z3" />
-        <item itemvalue="Application.LeetCodeDayTwo" />
         <item itemvalue="Spring Boot.MySpringApplication" />
         <item itemvalue="Application.LeetCodeDayOne" />
       </list>
@@ -174,7 +174,8 @@
       <updated>1691373966951</updated>
       <workItem from="1691373969738" duration="11084000" />
       <workItem from="1691485746947" duration="7959000" />
-      <workItem from="1691570095224" duration="8183000" />
+      <workItem from="1691570095224" duration="10236000" />
+      <workItem from="1691629605696" duration="4105000" />
     </task>
     <servers />
   </component>
