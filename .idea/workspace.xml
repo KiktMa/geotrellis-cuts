@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fafd079a-c01c-42ba-96f7-7818d41f352d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/leetcode/LeetCodeDayTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/leetcode/LeetCodeDayTwo.java" afterDir="false" />
-    </list>
+    <list default="true" id="fafd079a-c01c-42ba-96f7-7818d41f352d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,21 +74,7 @@
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
-  <component name="RunManager" selected="Application.LeetCodeDayTwo">
-    <configuration name="LeetCodeDayOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.leetcode.LeetCodeDayOne" />
-      <module name="spark_demo" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geosot.javademo.entity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.SendServer">
     <configuration name="LeetCodeDayTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.leetcode.LeetCodeDayTwo" />
       <module name="spark_demo" />
@@ -119,6 +103,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReceiveServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.leetcode.udp.ReceiveServer" />
+      <module name="spark_demo" />
+      <shortenClasspath name="CLASSPATH_FILE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geosot.javademo.leetcode.udp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SendServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.leetcode.udp.SendServer" />
+      <module name="spark_demo" />
+      <shortenClasspath name="MANIFEST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.geosot.javademo.leetcode.udp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Z3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.units.Z3" />
       <module name="spark_demo" />
@@ -133,34 +145,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MySpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="spark_demo" />
-      <option name="SHORTEN_COMMAND_LINE" value="CLASSPATH_FILE" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.geosot.javademo.MySpringApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geosot.javademo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.SendServer" />
+      <item itemvalue="Application.ReceiveServer" />
       <item itemvalue="Application.Z3" />
       <item itemvalue="Application.Quqian" />
       <item itemvalue="Application.LeetCodeDayTwo" />
-      <item itemvalue="Application.LeetCodeDayOne" />
-      <item itemvalue="Spring Boot.MySpringApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SendServer" />
+        <item itemvalue="Application.ReceiveServer" />
         <item itemvalue="Application.LeetCodeDayTwo" />
         <item itemvalue="Application.Quqian" />
         <item itemvalue="Application.Z3" />
-        <item itemvalue="Spring Boot.MySpringApplication" />
-        <item itemvalue="Application.LeetCodeDayOne" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +173,7 @@
       <workItem from="1691373969738" duration="11084000" />
       <workItem from="1691485746947" duration="7959000" />
       <workItem from="1691570095224" duration="10236000" />
-      <workItem from="1691629605696" duration="4105000" />
+      <workItem from="1691629605696" duration="8114000" />
     </task>
     <servers />
   </component>
