@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fafd079a-c01c-42ba-96f7-7818d41f352d" name="Changes" comment="" />
+    <list default="true" id="fafd079a-c01c-42ba-96f7-7818d41f352d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/leetcode/LeetCodeDayTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geosot/javademo/leetcode/LeetCodeDayTwo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +76,7 @@
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
-  <component name="RunManager" selected="Application.SendServer">
+  <component name="RunManager" selected="Application.LeetCodeDayTwo">
     <configuration name="LeetCodeDayTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.leetcode.LeetCodeDayTwo" />
       <module name="spark_demo" />
@@ -154,9 +156,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LeetCodeDayTwo" />
         <item itemvalue="Application.SendServer" />
         <item itemvalue="Application.ReceiveServer" />
-        <item itemvalue="Application.LeetCodeDayTwo" />
         <item itemvalue="Application.Quqian" />
         <item itemvalue="Application.Z3" />
       </list>
@@ -173,7 +175,8 @@
       <workItem from="1691373969738" duration="11084000" />
       <workItem from="1691485746947" duration="7959000" />
       <workItem from="1691570095224" duration="10236000" />
-      <workItem from="1691629605696" duration="11219000" />
+      <workItem from="1691629605696" duration="14755000" />
+      <workItem from="1691805177408" duration="4735000" />
     </task>
     <servers />
   </component>
