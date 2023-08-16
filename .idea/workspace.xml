@@ -74,7 +74,7 @@
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
-  <component name="RunManager" selected="Application.LeetCodeDayTwo">
+  <component name="RunManager" selected="HTTP Request.generated-requests | #1">
     <configuration name="LeetCodeDayTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.leetcode.LeetCodeDayTwo" />
       <module name="spark_demo" />
@@ -131,38 +131,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Z3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geosot.javademo.units.Z3" />
-      <module name="spark_demo" />
-      <shortenClasspath name="MANIFEST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.geosot.javademo.units.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.SendServer" />
       <item itemvalue="Application.ReceiveServer" />
-      <item itemvalue="Application.Z3" />
       <item itemvalue="Application.Quqian" />
       <item itemvalue="Application.LeetCodeDayTwo" />
+      <item itemvalue="HTTP Request.generated-requests | #1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="Application.LeetCodeDayTwo" />
         <item itemvalue="Application.SendServer" />
         <item itemvalue="Application.ReceiveServer" />
         <item itemvalue="Application.Quqian" />
-        <item itemvalue="Application.Z3" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fafd079a-c01c-42ba-96f7-7818d41f352d" name="Changes" comment="" />
@@ -174,7 +166,7 @@
       <workItem from="1691485746947" duration="7959000" />
       <workItem from="1691570095224" duration="10236000" />
       <workItem from="1691629605696" duration="14755000" />
-      <workItem from="1691805177408" duration="13900000" />
+      <workItem from="1691805177408" duration="25123000" />
     </task>
     <servers />
   </component>
