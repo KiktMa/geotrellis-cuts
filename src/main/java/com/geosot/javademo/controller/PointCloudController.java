@@ -18,8 +18,9 @@ public class PointCloudController {
         this.accumuloService = accumuloService;
     }
 
+//    @Transactional
     @GetMapping("/queryPointCloud")
-    public List<Map<String, String>> queryPointCloud() {
+    public List<Map<String, Object>> queryPointCloud() {
         return accumuloService.queryPointCloud();
     }
 }

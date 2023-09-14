@@ -19,8 +19,8 @@ public class AccumuloDataReader {
      * 根据GeoSot-3D编码对数据进行范围插叙
      * 可以根据两个坐标点来生成编码来对数据进行动态查询
      */
-    public List<Map<String, String>> queryPointCloud() {
-        List<Map<String, String>> result = new ArrayList<>();
+    public List<Map<String, Object>> queryPointCloud() {
+        List<Map<String, Object>> result = new ArrayList<>();
         try {
             Connector conn = AccumuloDataUploader.getConn();
             Scanner scanner = conn.createScanner("large_point_cloud", Authorizations.EMPTY);
@@ -29,10 +29,10 @@ public class AccumuloDataReader {
             scanner.setRange(new Range("0004836404CA6C929B659659","0004836404CA6C96890C9008"));
 //            int count = 0;
             for (Map.Entry<Key, Value> pointcloud : scanner) {
-                Map<String, String> point = new HashMap<>();
-                point.put("x", pointcloud.getKey().getColumnQualifier(new Text("x")).toString());
-                point.put("y", pointcloud.getKey().getColumnFamily(new Text("y")).toString());
-                point.put("z", pointcloud.getKey().getColumnFamily(new Text("z")).toString());
+                Map<String, Object> point = new HashMap<>();
+                point.put(pointcloud.getKey().toString(), pointcloud.getValue().get());
+//                point.put(pointcloud.getKey().getColumnFamily(new Text("y")).toString(), pointcloud.getValue());
+//                point.put(pointcloud.getKey().getColumnFamily(new Text("z")).toString(), pointcloud.getValue());
                 result.add(point);
             }
 //            System.out.println((System.currentTimeMillis()-start)+"ms");

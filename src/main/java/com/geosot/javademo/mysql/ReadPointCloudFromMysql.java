@@ -15,7 +15,7 @@ public class ReadPointCloudFromMysql {
             String query = "SELECT * FROM las_0 WHERE code >= ? AND code <= ?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, "0004836404CA6C929B659659");
-            preparedStatement.setString(2, "0004836404D82594082D8290");
+            preparedStatement.setString(2, "0004836404CA6C9619600219");
 
             // 执行查询
             long start = System.currentTimeMillis();
