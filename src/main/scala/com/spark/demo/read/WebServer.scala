@@ -25,6 +25,8 @@ import geotrellis.spark.io.accumulo.{AccumuloAttributeStore, AccumuloCollectionL
 import org.apache.accumulo.core.client.security.tokens.PasswordToken
 import org.apache.spark.{SparkConf, SparkContext}
 
+import scala.io.StdIn
+
 object WebServer extends CorsSupport {
   /**
    * 这里需在提交spark任务时加入一个参数
@@ -135,7 +137,7 @@ object WebServer extends CorsSupport {
     val bindingFuture = Http().bindAndHandle(route, "192.168.163.131", 9090)
 
     println(s"Server online at http://192.168.163.131:9090/\nPress RETURN to stop...")
-    scala.io.StdIn.readLine() // 等待用户输入回车键停止服务器
+    StdIn.readLine() // 等待用户输入回车键停止服务器
 
     bindingFuture
       .flatMap(_.unbind()) // 触发端口解绑操作
