@@ -34,3 +34,10 @@ cd geotrellis-cuts
 
 # 将项目打包上传Linux中
 ./bin/spark-submit --class com.spark.demo.Cuts --master yarn /jar包目录/spark_demo-0.1.0-SNAPSHOT.jar "hdfs://Hadoop集群master节点ip:port/栅格路径" "testcode" "17" "14"
+
+# 将金字塔模型发布为TMS服务
+./bin/spark-submit --class com.spark.demo.read.WebServer --master yarn /jar包目录/spark_demo-0.1.0-SNAPSHOT.jar "金字塔模型在accumulo中的存储表名"
+```
+
+## 前端展示demo
+[CesiumDemo](https://github.com/KiktMa/CesiumDemo)
