@@ -1,6 +1,6 @@
 # GeoTrellis-Cuts: 分布式栅格数据和点云存储方案
 
-![Project Banner](project_banner.png) <!-- 替换为您的项目横幅图片 -->
+![ProjectDemo](https://github.com/KiktMa/error-png/blob/master/cesium/cesium.jpg) <!-- 替换为您的项目横幅图片 -->
 
 欢迎来到 GeoTrellis-Cuts 项目！这是一个致力于优化栅格数据和点云数据存储的分布式方案，利用 GeoSOT 模型构建金字塔和多级存储，将数据高效地存储于分布式 Accumulo 数据库中。
 
